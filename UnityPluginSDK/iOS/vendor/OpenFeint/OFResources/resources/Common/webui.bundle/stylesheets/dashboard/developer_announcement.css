@@ -1,0 +1,50 @@
+.view_all {
+  color: white;
+  font-size: 13px;
+  float: right;
+  height: 25px;
+  line-height: 25px;
+  margin: 10px 0;
+  text-align: center;
+  width: 60px;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#bfbdbd), to(#aaa8a8));
+  -webkit-border-radius: 5px;
+  text-shadow: none; }
+
+.announ_subject {
+  background: #e8e6e6 url(images/dashboard/icon_announcement.mdpi.png) no-repeat 10px center;
+  border-bottom: 1px solid #c1c1c1;
+  color: #25731f;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 24px;
+  margin: 0;
+  padding: 10px 0 10px 40px;
+  -webkit-background-size: 24px; }
+
+.announ_body {
+  color: #595959;
+  font-size: 13px;
+  font-weight: normal;
+  margin: 0;
+  padding: 10px; }
+
+body.ios .developer_announcement .section_title {
+  display: none; }
+
+
+/*
+ *    1.5x pixel scale
+ */
+
+body.hdpi .announ_subject {
+  background: #e8e6e6 url(images/dashboard/icon_announcement.hdpi.png) no-repeat 10px center;
+}
+
+/*
+ *    2x pixel scale
+ */
+
+body.udpi .announ_subject {
+  background: #e8e6e6 url(images/dashboard/icon_announcement.udpi.png) no-repeat 10px center;
+}

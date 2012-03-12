@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>9.0.21022</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{0FEE50BD-91B0-BBDC-D9EF-5C7F9C769E54}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace>Irrelevant</RootNamespace>
+	<AssemblyName>Irrelvant</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_3_2_0;UNITY_3_2;UNITY_EDITOR;ENABLE_PROFILER;UNITY_IOS;UNITY_IPHONE;ENABLE_GENERICS;ENABLE_NETWORK;ENABLE_WWW</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+	<Reference Include="Boo.Lang">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/Boo.Lang.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityScript">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Mono/lib/mono/unity/UnityScript.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Editor\OpenFeint\Editor Integration\NotificationPosition.cs" />
+     <Compile Include="Assets\Editor\OpenFeint\Editor Integration\OFEditorIntegration.cs" />
+     <Compile Include="Assets\Editor\OpenFeint\Editor Integration\OpenFeintSettingsWizard.cs" />
+     <Compile Include="Assets\GameCode\BaseUI.cs" />
+     <Compile Include="Assets\GameCode\RenderLoop.cs" />
+     <Compile Include="Assets\Plugins\Base\CallbackFetcherBase.cs" />
+     <Compile Include="Assets\Plugins\Base\CallbackFetcherFactory.cs" />
+     <Compile Include="Assets\Plugins\Base\Define.cs" />
+     <Compile Include="Assets\Plugins\Base\GameObjectManagerInitializer.cs" />
+     <Compile Include="Assets\Plugins\Base\ICallback.cs" />
+     <Compile Include="Assets\Plugins\Base\IUnityToNativeMessage.cs" />
+     <Compile Include="Assets\Plugins\Base\NativeToUnity.cs" />
+     <Compile Include="Assets\Plugins\Base\UnityToJavaMessage.cs" />
+     <Compile Include="Assets\Plugins\Base\UnityToNative.cs" />
+     <Compile Include="Assets\Plugins\Base\UnityToNativeMessageManager.cs" />
+     <Compile Include="Assets\Plugins\Base\UnityToObjCMessage.cs" />
+     <Compile Include="Assets\Plugins\Base\UnityToPlatformUnsupportedMessage.cs" />
+     <Compile Include="Assets\Plugins\Base\minijson_143.cs" />
+     <Compile Include="Assets\Plugins\OpenFeint\CallbackFetcherOpenFeint.cs" />
+     <Compile Include="Assets\Plugins\OpenFeint\CallbackFetcherOpenFeintX.cs" />
+     <Compile Include="Assets\Plugins\OpenFeint\OpenFeint.cs" />
+     <Compile Include="Assets\Plugins\OpenFeint\OpenFeintX.cs" />
+     <Compile Include="Assets\Plugins\Properties\CallbackFetcherProperties.cs" />
+     <Compile Include="Assets\Plugins\Properties\IPropertiesCustomization.cs" />
+     <Compile Include="Assets\Plugins\Properties\Properties.cs" />
+     <Compile Include="Assets\Plugins\Properties\UnityToNativeProperties.cs" />
+     <None Include="Assets\Plugins\Properties\properties.json.txt" />
+     <None Include="Assets\Resources\GamePreferences\properties.json.txt" />
+     <None Include="Assets\RetroCarScripts\AccelerateButton.js" />
+     <None Include="Assets\RetroCarScripts\AfterCrashScreen.js" />
+     <None Include="Assets\RetroCarScripts\CameraFollow.js" />
+     <None Include="Assets\RetroCarScripts\CarEngineSound.js" />
+     <None Include="Assets\RetroCarScripts\CrashAnimation.js" />
+     <None Include="Assets\RetroCarScripts\DestroyClones.js" />
+     <None Include="Assets\RetroCarScripts\DontDestroyOnLoad.js" />
+     <Compile Include="Assets\RetroCarScripts\GarbageCollectManager.cs" />
+     <None Include="Assets\RetroCarScripts\Globals.js" />
+     <None Include="Assets\RetroCarScripts\HighScoresButton.js" />
+     <None Include="Assets\RetroCarScripts\Instructions.js" />
+     <None Include="Assets\RetroCarScripts\LaunchOpenFeintDashboard.js" />
+     <None Include="Assets\RetroCarScripts\LeftButton.js" />
+     <None Include="Assets\RetroCarScripts\LifesGUITextureSetter.js" />
+     <None Include="Assets\RetroCarScripts\LockOrienatation.js" />
+     <None Include="Assets\RetroCarScripts\MoveBackward.js" />
+     <None Include="Assets\RetroCarScripts\MoveCameraForward.js" />
+     <None Include="Assets\RetroCarScripts\MoveForward.js" />
+     <None Include="Assets\RetroCarScripts\OnCollisionEnter.js" />
+     <None Include="Assets\RetroCarScripts\OnTriggerEnter.js" />
+     <None Include="Assets\RetroCarScripts\OpenFeintStuff.js" />
+     <None Include="Assets\RetroCarScripts\PauseButton.js" />
+     <None Include="Assets\RetroCarScripts\PlayButton.js" />
+     <None Include="Assets\RetroCarScripts\RightButton.js" />
+     <None Include="Assets\RetroCarScripts\ScoreIncrease.js" />
+     <None Include="Assets\RetroCarScripts\StartSound.js" />
+     <None Include="Assets\RetroCarScripts\TapGUITexture.js" />
+     <None Include="Assets\RetroCarScripts\ToFollowObjectPush.js" />
+     <None Include="Assets\Standard Assets\Scripts\Camera Scripts\MouseOrbit.js" />
+     <None Include="Assets\Standard Assets\Scripts\Camera Scripts\SmoothLookAt.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" />
+     <None Include="Assets\Standard Assets\Scripts\General Scripts\DragRigidbody.js" />
+     <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\CombineChildren.cs" />
+     <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\MeshCombineUtility.cs" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\FirstPersonControl.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\FollowTransform.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\Joystick.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\ObliqueNear.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\PlayerRelativeControl.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\RollABall.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\RotationConstraint.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\SidescrollControl.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\SmoothFollow2D.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\TapControl.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Scripts\ZoomCamera.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Detail.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Particles Additive Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Vertex Colored.shader" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
+	

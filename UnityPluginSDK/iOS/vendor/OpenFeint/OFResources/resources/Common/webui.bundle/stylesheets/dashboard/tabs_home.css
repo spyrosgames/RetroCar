@@ -1,0 +1,41 @@
+/* --- dashboard/tabs_home --- */
+.manifest_dependency_hints {
+  background-image: url(images/dashboard/tabs/tab_green.mdpi.png);
+  background-image: url(images/dashboard/tabs/tab_grey.mdpi.png);
+  background-image: url(images/dashboard/tabs/tab_divider_left.mdpi.png);
+  background-image: url(images/dashboard/tabs/tab_divider_right.mdpi.png);
+  background-image: url(images/dashboard/tabs/tab_profile_white.mdpi.png);
+  background-image: url(images/dashboard/tabs/tab_profile_grey.mdpi.png);
+  background-image: url(images/dashboard/tabs/tab_community_white.mdpi.png);
+  background-image: url(images/dashboard/tabs/tab_community_grey.mdpi.png); }
+
+
+/*
+ *    1.5x pixel scale
+ */
+
+body.hdpi .manifest_dependency_hints {
+  background-image: url(images/dashboard/tabs/tab_green.hdpi.png);
+  background-image: url(images/dashboard/tabs/tab_grey.hdpi.png);
+  background-image: url(images/dashboard/tabs/tab_divider_left.hdpi.png);
+  background-image: url(images/dashboard/tabs/tab_divider_right.hdpi.png);
+  background-image: url(images/dashboard/tabs/tab_profile_white.hdpi.png);
+  background-image: url(images/dashboard/tabs/tab_profile_grey.hdpi.png);
+  background-image: url(images/dashboard/tabs/tab_community_white.hdpi.png);
+  background-image: url(images/dashboard/tabs/tab_community_grey.hdpi.png);
+}
+
+/*
+ *    2x pixel scale
+ */
+
+body.udpi .manifest_dependency_hints {
+  background-image: url(images/dashboard/tabs/tab_green.udpi.png);
+  background-image: url(images/dashboard/tabs/tab_grey.udpi.png);
+  background-image: url(images/dashboard/tabs/tab_divider_left.udpi.png);
+  background-image: url(images/dashboard/tabs/tab_divider_right.udpi.png);
+  background-image: url(images/dashboard/tabs/tab_profile_white.udpi.png);
+  background-image: url(images/dashboard/tabs/tab_profile_grey.udpi.png);
+  background-image: url(images/dashboard/tabs/tab_community_white.udpi.png);
+  background-image: url(images/dashboard/tabs/tab_community_grey.udpi.png);
+}

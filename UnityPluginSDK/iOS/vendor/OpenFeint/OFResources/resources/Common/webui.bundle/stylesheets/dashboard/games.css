@@ -1,0 +1,132 @@
+ul.cells li {
+  height: auto; }
+ul.cells .game_cell .icon {
+  height: 42px;
+  margin: 0 8px 0 0;
+  width: 42px;
+  -webkit-background-size: 42px; }
+
+.game_cell .icon {
+  background-image: url(images/icon.game.mdpi.png); }
+.game_cell .game_title {
+  color: #25731f;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 42px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
+.others_game {
+  overflow: hidden; }
+  .others_game .action_button {
+    margin: 2px 0;
+    text-allign: center; }
+  .others_game .platform_icons {
+    float: right;
+    height: 36px;
+    line-height: 36px;
+    margin-left: 5px; }
+
+.shared_games .section_title {
+  display: table;
+  padding-right: 0;
+  width: 100%; }
+  .shared_games .section_title li {
+    display: table-cell; }
+  .shared_games .section_title .them_col, .shared_games .section_title .my_col {
+    text-align: center;
+    width: 70px; }
+.shared_games .shared_game_list li {
+  overflow: hidden;
+  padding: 0; }
+.shared_games .shared_game_list .right_column, .shared_games .shared_game_list .center_column {
+  padding: 8px 0; }
+.shared_games .shared_game_list .right_column {
+  overflow: hidden;
+  width: 141px; }
+  .shared_games .shared_game_list .right_column .achievement_percent_container {
+    float: left;
+    padding: 12px 0;
+    text-align: center;
+    width: 70px; }
+    .shared_games .shared_game_list .right_column .achievement_percent_container span {
+      background: url(images/dashboard/lower_achievement.mdpi.png) no-repeat left center;
+      display: inline-block;
+      padding-left: 20px;
+      -webkit-background-size: 17px; }
+  .shared_games .shared_game_list .right_column div.higher_achievement span {
+    background-image: url(images/dashboard/higher_achievement.mdpi.png);
+    color: #25731f; }
+  .shared_games .shared_game_list .right_column .first_container {
+    border-right: 1px solid #dfdede; }
+.shared_games .shared_game_list .center_column {
+  border-right: 1px solid #bebebe;
+  margin-right: 141px;
+  padding-left: 10px; }
+.shared_games .game_title {
+  line-height: 20px;
+  padding-right: 5px; }
+.shared_games .platform_icons {
+  height: 24px; }
+
+.platform_icon {
+  background: no-repeat left center;
+  display: none;
+  height: 100%;
+  margin-left: -6px;
+  width: 24px;
+  -webkit-background-size: 24px; }
+
+.ios_icon {
+  background-image: url(images/dashboard/ios_game.mdpi.png); }
+
+.android_icon {
+  background-image: url(images/dashboard/android_game.mdpi.png); }
+
+.ios_platform .ios_icon {
+  display: inline-block; }
+
+.android_platform .android_icon {
+  display: inline-block; }
+
+
+/*
+ *    1.5x pixel scale
+ */
+
+body.hdpi .shared_games .shared_game_list .right_column div.higher_achievement span {
+  background-image: url(images/dashboard/higher_achievement.hdpi.png);
+}
+body.hdpi .game_cell .icon {
+  background-image: url(images/icon.game.hdpi.png);
+}
+body.hdpi .shared_games .shared_game_list .right_column .achievement_percent_container span {
+  background: url(images/dashboard/lower_achievement.hdpi.png) no-repeat left center;
+}
+body.hdpi .android_icon {
+  background-image: url(images/dashboard/android_game.hdpi.png);
+}
+body.hdpi .ios_icon {
+  background-image: url(images/dashboard/ios_game.hdpi.png);
+}
+
+/*
+ *    2x pixel scale
+ */
+
+body.udpi .shared_games .shared_game_list .right_column div.higher_achievement span {
+  background-image: url(images/dashboard/higher_achievement.udpi.png);
+}
+body.udpi .game_cell .icon {
+  background-image: url(images/icon.game.udpi.png);
+}
+body.udpi .shared_games .shared_game_list .right_column .achievement_percent_container span {
+  background: url(images/dashboard/lower_achievement.udpi.png) no-repeat left center;
+}
+body.udpi .android_icon {
+  background-image: url(images/dashboard/android_game.udpi.png);
+}
+body.udpi .ios_icon {
+  background-image: url(images/dashboard/ios_game.udpi.png);
+}

@@ -1,0 +1,157 @@
+{
+    "game_feed": [
+        {
+            "type": "profile_picture2",
+            "user": {
+                "id": 1234,
+                "name": "D34thK1lla-420",
+                "picture": "http://placekitten.com/100/100"
+            }
+        },
+        {
+            "type": "ad.highscore",
+            "promotion": {
+                "url": "http://itunes.apple.com/app/id428189565?mt=8",
+                "picture": "http://a4.mzstatic.com/us/r1000/055/Purple/e2/73/b3/mzm.zwhqoktt.175x175-75.jpg",
+                "id": "mega_jump_promotion",
+                "call_to_action": "Download Mega Jump!"
+            },
+            "user": {
+                "id": 1234,
+                "name": "D34thK1lla-420",
+                "picture": "http://placekitten.com/100/100"
+            },
+            "game": {
+                "id": 2345,
+                "name": "Mega Jump"
+            }
+        },
+        {
+            "type": "ad.achievement",
+            "promotion": {
+                "url": "http://itunes.apple.com/app/id428189565?mt=8",
+                "picture": "http://a4.mzstatic.com/us/r1000/055/Purple/e2/73/b3/mzm.zwhqoktt.175x175-75.jpg",
+                "id": "mega_jump_promotion",
+                "call_to_action": "Download Mega Jump!"
+            },
+            "user": {
+                "id": 1234,
+                "name": "D34thK1lla-420",
+                "picture": "http://placekitten.com/100/100"
+            },
+            "game": {
+                "id": 2345,
+                "name": "Mega Jump"
+            }
+        },
+        {
+            "type": "ad.image",
+            "landscape_url": "http://dl.dropbox.com/u/6050177/megaJumpLandscape.mdpi.png",
+            "portrait_url": "http://dl.dropbox.com/u/6050177/megaJump.mdpi.png",
+            "game": {
+                "name": "Seeded Game 66924",
+                "id": 66924,
+                "store_id": 66924
+            }
+        },
+        {
+            "type": "ad.generic",
+            "game": {
+                "name": "Seeded Game 66924",
+                "id": 66924,
+                "store_id": 66924
+            },
+            "icon_url": "http://placekitten.com/g/100/100",
+            "call_to_action": "CTA version B",
+            "text": "This is ad version B"
+        },
+        {
+            "type": "profile_picture",
+            "user": {
+                "id": 1234,
+                "name": "D34thK1lla-420",
+                "picture": "http://placekitten.com/100/100"
+            }
+        },
+        {
+            "type": "generic",
+            "id": 1234,
+            "key": "admin-set-free-text-item-id-for-analytics",
+            "title": "Hello World.",
+            "body": "The world says hello.",
+            "call_to_action": "Say Hello Back!",
+            "icon": "http://placekitten.com/g/100/100",
+            "action": "openfeint://action/openBrowser?url=http%3A%2F%2Fplacekitten.com%2F400%2F400"
+        },
+        {
+            "type": "login"
+        },
+        {
+            "type": "profile_picture",
+            "user": {
+                "id": 1234,
+                "name": "D34thK1lla-420",
+                "picture": "http://placekitten.com/100/100"
+            }
+        },
+        {
+            "type": "highscore",
+            "user": {
+                "id": 3210,
+                "name": "1337DudeFace",
+                "picture": "http://placekitten.com/100/100"
+            },
+            "score": 9000,
+            "leaderboard": {
+                "id": 2345,
+                "name": "Time Attack"
+            }
+        },
+        {
+            "type": "achievement",
+            "user": {
+                "id": 1234,
+                "name": "D34thK1lla-420",
+                "picture": "http://placekitten.com/100/100"
+            },
+            "achievement": {
+                "id": 4567,
+                "name": "Awesome Ninja",
+                "points": 10,
+                "picture": "http://placekitten.com/150/150"
+            }
+        },
+        {
+            "type": "achievement.beforeyou",
+            "user": {
+                "id": 1234,
+                "name": "D34thK1lla-420",
+                "picture": "http://placekitten.com/100/100"
+            },
+            "achievement": {
+                "id": 4567,
+                "name": "Awesome Ninja",
+                "points": 10,
+                "picture": "http://placekitten.com/150/150"
+            }
+        },
+        {
+            "type": "parental_controls"
+        },
+        {
+            "type": "announcement",
+            "game_icon_url": "http://a4.mzstatic.com/us/r1000/006/Purple/40/77/88/mzl.miwmyqos.jpg",
+            "developer": {
+                "id": 7813,
+                "name": "MegaFun Corp.",
+                "picture": "http://placekitten.com/100/100"
+            },
+            "announcement": {
+                "id": 7813,
+                "title": "Am I broken",
+                "body": "Can you read me",
+                "picture": "http://placekitten.com/100/100"
+            }
+        }
+    ]
+}

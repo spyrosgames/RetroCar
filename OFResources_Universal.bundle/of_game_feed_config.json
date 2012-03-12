@@ -1,0 +1,2821 @@
+{
+    "default_customization": {
+        "icon_color_negative": "#FFAC11",
+        "icon_color": "#0DA840",
+        "disclosure_color": "#D7D7D7",
+        "icon_color_positive": "#0DA840",
+        "username_color": "#098130",
+        "text_color": "#585858",
+        "title_color": "#098130",
+        "call_out_color": "#585858",
+        "highlighted_color": "#FFFF00",
+        "shadow_color": "#000000",
+        "tab_left_image": {
+            "bundle": "OFGameBarCustomizeBackLeft.png"
+        },
+        "tab_right_image": {
+            "bundle": "OFGameBarCustomizeBackRight.png"
+        },
+        "cell_background_image_landscape": {
+            "bundle": "OFRegularFullLandscape.png"
+        },
+        "cell_background_image_portrait": {
+            "bundle": "OFRegularFullPortrait.png"
+        },
+        "cell_hit_image_landscape": {
+            "bundle": "OFHitFullLandscape.png"
+        },
+        "cell_hit_image_portrait": {
+            "bundle": "OFHitFullPortrait.png"
+        },
+        "cell_divider_image_landscape": {
+            "bundle": "OFGameBarCellDividerLandscape.png"
+        },
+        "cell_divider_image_portrait": {
+            "bundle": "OFGameBarCellDividerPortrait.png"
+        },
+        "profile_frame_image": {
+            "bundle": "OFGameBarProfileFrame.png"
+        },
+        "small_profile_frame_image": {
+            "bundle": "OFGameBarProfileFrameSmall.png"
+        }
+    },
+    "game_feed_config": {
+        "profile_picture2": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            80,
+                            5,
+                            150,
+                            30
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "testing...",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            150,
+                            40,
+                            80,
+                            30
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "Check it out!",
+                        "color": "custom.text_color",
+                        "shadow_color": "custom.shadow_color",
+                        "shadow_offset": [
+                            -1,
+                            -1
+                        ]
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            45,
+                            5,
+                            40,
+                            40
+                        ],
+                        "color": "custom.icon_color_positive",
+                        "image": {
+                            "bundle": "OFGameBarProfileIcon.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            200,
+                            35,
+                            40,
+                            40
+                        ],
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            48,
+                            45,
+                            172,
+                            2
+                        ],
+                        "image": "custom.cell_divider_image_portrait"
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "label",
+                        "text": "alsekhflahekf",
+                        "position": 3
+                    },
+                    {
+                        "type": "label",
+                        "position": 9
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "openfeint://action/dashboardPage?page=Profile&user_id={user.id}&user_name=[user.name]",
+                "analytics_name": "profile_picture2.variant_a",
+                "instance_key": "profile_picture2.{user.id}"
+            }
+        ],
+        "ad.image": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            1,
+                            2,
+                            225,
+                            64
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{portrait_url}"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            1,
+                            2,
+                            225,
+                            64
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFPortraitAdBorderCell.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            4,
+                            0,
+                            16,
+                            19
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFAdBadge.png"
+                        }
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            2,
+                            2,
+                            300,
+                            50
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{landscape_url}"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            2,
+                            2,
+                            300,
+                            50
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFLandscapeAdBorderCell.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            4,
+                            0,
+                            16,
+                            19
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFAdBadge.png"
+                        }
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "openfeint://action/openBrowser?url={custom.server_url}client_applications/{game.id}/buy_now",
+                "analytics_name": "ad.image.variant_a",
+                "instance_key": "ad.image.{game.id}",
+                "impression_path": "impressions/{game.id}"
+            }
+        ],
+        "ad.generic": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{icon_url}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            50,
+                            5,
+                            159,
+                            41
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "left",
+                        "text": "{text}",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            46,
+                            172,
+                            2
+                        ],
+                        "framed": false,
+                        "image": "custom.cell_divider_image_portrait"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            54,
+                            48,
+                            159,
+                            16
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "right",
+                        "text": "{call_to_action}",
+                        "color": "custom.call_out_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            216,
+                            51,
+                            7,
+                            9
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            1,
+                            2,
+                            225,
+                            64
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFPortraitAdBorderCell.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            5,
+                            0,
+                            16,
+                            19
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFAdBadge.png"
+                        }
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{icon_url}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            51,
+                            5,
+                            219,
+                            27
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "left",
+                        "text": "{text}",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            52,
+                            34,
+                            237,
+                            2
+                        ],
+                        "framed": false,
+                        "image": "custom.cell_divider_image_landscape"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            55,
+                            35,
+                            232,
+                            16
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "right",
+                        "text": "{call_to_action}",
+                        "color": "custom.call_out_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            290,
+                            38,
+                            7,
+                            9
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            2,
+                            2,
+                            300,
+                            50
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFLandscapeAdBorderCell.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            4,
+                            0,
+                            16,
+                            19
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFAdBadge.png"
+                        }
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "openfeint://action/openBrowser?url={custom.server_url}client_applications/{game.id}/buy_now",
+                "analytics_name": "ad.generic.variant_a",
+                "instance_key": "ad.generic.{game.id}",
+                "impression_path": "impressions/{game.id}"
+            }
+        ],
+        "ad.achievement": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{promotion.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            16,
+                            21,
+                            21
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            16,
+                            21,
+                            22
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": "custom.small_profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            76,
+                            5,
+                            133,
+                            41
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "left",
+                        "text": "{user.name} just unlocked an achievement in {game.name}! Try and beat them!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            46,
+                            172,
+                            2
+                        ],
+                        "framed": false,
+                        "image": "custom.cell_divider_image_portrait"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            54,
+                            48,
+                            159,
+                            16
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "right",
+                        "text": "{promotion.call_to_action}",
+                        "color": "custom.call_out_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            216,
+                            51,
+                            7,
+                            9
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            1,
+                            2,
+                            225,
+                            64
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFPortraitAdBorderCell.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            5,
+                            0,
+                            16,
+                            19
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFAdBadge.png"
+                        }
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{promotion.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            51,
+                            9,
+                            21,
+                            21
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            51,
+                            9,
+                            21,
+                            22
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": "custom.small_profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            77,
+                            5,
+                            193,
+                            27
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "left",
+                        "text": "{user.name} just unlocked an achievement in {game.name}! Try and beat them!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            52,
+                            34,
+                            237,
+                            2
+                        ],
+                        "framed": false,
+                        "image": "custom.cell_divider_image_landscape"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            55,
+                            35,
+                            232,
+                            16
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "right",
+                        "text": "{promotion.call_to_action}",
+                        "color": "custom.call_out_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            290,
+                            38,
+                            7,
+                            9
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            2,
+                            2,
+                            300,
+                            50
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFLandscapeAdBorderCell.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            4,
+                            0,
+                            16,
+                            19
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFAdBadge.png"
+                        }
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "openfeint://action/openBrowser?url=[promotion.url]",
+                "analytics_name": "ad.achievement.variant_a",
+                "instance_key": "ad.achievement.{promotion.id}",
+                "impression_path": "impressions/{game.id}"
+            }
+        ],
+        "ad.highscore": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{promotion.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            16,
+                            21,
+                            21
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            16,
+                            21,
+                            22
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": "custom.small_profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            76,
+                            5,
+                            133,
+                            41
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "left",
+                        "text": "{user.name} just got a high score in {game.name}! Try and beat them!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            46,
+                            172,
+                            2
+                        ],
+                        "framed": false,
+                        "image": "custom.cell_divider_image_portrait"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            54,
+                            48,
+                            159,
+                            16
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "right",
+                        "text": "{promotion.call_to_action}",
+                        "color": "custom.call_out_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            216,
+                            51,
+                            7,
+                            9
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            1,
+                            2,
+                            225,
+                            64
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFPortraitAdBorderCell.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            5,
+                            0,
+                            16,
+                            19
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFAdBadge.png"
+                        }
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{promotion.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            51,
+                            9,
+                            21,
+                            21
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            51,
+                            9,
+                            21,
+                            22
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": "custom.small_profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            77,
+                            5,
+                            193,
+                            27
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "left",
+                        "text": "{user.name} just got a high score in {game.name}! Try and beat them!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            52,
+                            34,
+                            237,
+                            2
+                        ],
+                        "framed": false,
+                        "image": "custom.cell_divider_image_landscape"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            55,
+                            35,
+                            232,
+                            16
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 11,
+                        "alignment": "right",
+                        "text": "{promotion.call_to_action}",
+                        "color": "custom.call_out_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            290,
+                            38,
+                            7,
+                            9
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            2,
+                            2,
+                            300,
+                            50
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFLandscapeAdBorderCell.png"
+                        }
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            4,
+                            0,
+                            16,
+                            19
+                        ],
+                        "framed": false,
+                        "image": {
+                            "bundle": "OFAdBadge.png"
+                        }
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "openfeint://action/openBrowser?url=[promotion.url]",
+                "analytics_name": "ad.achievement.variant_a",
+                "instance_key": "ad.achievement.{promotion.id}",
+                "impression_path": "impressions/{game.id}"
+            }
+        ],
+        "announcement": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{game_icon_url}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            46,
+                            172,
+                            2
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_divider_image_portrait"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            76,
+                            4,
+                            147,
+                            40
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "{announcement.title}",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            55,
+                            50,
+                            158,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "Check it out!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            16,
+                            20,
+                            15
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarDeveloperAnnouncement.png"
+                        },
+                        "color": "custom.icon_color_positive"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            216,
+                            52,
+                            7,
+                            9
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{announcement.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            34,
+                            237,
+                            2
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_divider_image_landscape"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            77,
+                            5,
+                            200,
+                            28
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "{announcement.title}",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            82,
+                            38,
+                            207,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "Check it out!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            11,
+                            20,
+                            15
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarDeveloperAnnouncement.png"
+                        },
+                        "color": "custom.icon_color_positive"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            290,
+                            39,
+                            7,
+                            9
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "openfeint://action/dashboardPage?page=AnnouncementDetail&announcement_id={announcement.id}&announcement_title=[announcement.title]&announcement_body=[announcement.body]&announcement_picture=[announcement.picture]",
+                "analytics_name": "announcement.variant_a",
+                "instance_key": "announcement.{announcement.id}"
+            }
+        ],
+        "profile_picture": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            7,
+                            7,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            46,
+                            172,
+                            2
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_divider_image_portrait"
+                    },
+                    {
+                        "type": "label",
+                        "text": "<color={custom.username_color}>[user.name]</color> just updated their profile picture!",
+                        "frame": [
+                            76,
+                            4,
+                            147,
+                            40
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            55,
+                            50,
+                            158,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "Check it out!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            16,
+                            20,
+                            15
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarProfileIcon.png"
+                        },
+                        "color": "custom.icon_color_positive"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            216,
+                            52,
+                            7,
+                            9
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            34,
+                            237,
+                            2
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_divider_image_landscape"
+                    },
+                    {
+                        "type": "label",
+                        "text": "<color={custom.username_color}>[user.name]</color> just updated their profile picture!",
+                        "frame": [
+                            77,
+                            5,
+                            200,
+                            28
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            82,
+                            38,
+                            207,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "Check it out!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            11,
+                            20,
+                            15
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarProfileIcon.png"
+                        },
+                        "color": "custom.icon_color_positive"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            290,
+                            39,
+                            7,
+                            9
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmtpyLandscape"
+                ],
+                "action": "openfeint://action/dashboardPage?page=Profile&user_id={user.id}&user_name=[user.name]",
+                "analytics_name": "profile_picture.variant_a",
+                "instance_key": "profile_picture.{user.id}"
+            }
+        ],
+        "highscore": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            46,
+                            172,
+                            2
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_divider_image_portrait"
+                    },
+                    {
+                        "type": "label",
+                        "text": "<color={custom.username_color}>[user.name]</color> just got a great score on {leaderboard.name}!",
+                        "frame": [
+                            84,
+                            4,
+                            142,
+                            40
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            55,
+                            50,
+                            158,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "Check it out!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            17,
+                            30,
+                            13
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarLeaderboardsIcon.png"
+                        },
+                        "color": "custom.icon_color_positive"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            216,
+                            52,
+                            7,
+                            9
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            34,
+                            237,
+                            2
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_divider_image_landscape"
+                    },
+                    {
+                        "type": "label",
+                        "text": "<color={custom.username_color}>[user.name]</color> just got a great score on {leaderboard.name}!",
+                        "frame": [
+                            84,
+                            5,
+                            210,
+                            28
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            82,
+                            38,
+                            207,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "Check it out!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            12,
+                            30,
+                            13
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarLeaderboardsIcon.png"
+                        },
+                        "color": "custom.icon_color_positive"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            290,
+                            39,
+                            7,
+                            9
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "openfeint://action/dashboardPage?page=HighScore&leaderboard_id={leaderboard.id}",
+                "analytics_name": "highscore.variant_a",
+                "instance_key": "highscore.{user.id}.{leaderboard.id}"
+            }
+        ],
+        "achievement": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            46,
+                            172,
+                            2
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_divider_image_portrait"
+                    },
+                    {
+                        "type": "label",
+                        "text": "<color={custom.username_color}>[user.name]</color> just unlocked {achievement.name}!",
+                        "frame": [
+                            76,
+                            4,
+                            147,
+                            40
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            55,
+                            50,
+                            158,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "Check it out!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            15,
+                            20,
+                            18
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarAchievementIcon.png"
+                        },
+                        "color": "custom.icon_color_positive"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            216,
+                            52,
+                            7,
+                            9
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            34,
+                            237,
+                            2
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_divider_image_landscape"
+                    },
+                    {
+                        "type": "label",
+                        "text": "<color={custom.username_color}>[user.name]</color> just unlocked {achievement.name}!",
+                        "frame": [
+                            78,
+                            5,
+                            216,
+                            28
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            82,
+                            38,
+                            207,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "Check it out!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            10,
+                            20,
+                            18
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarAchievementIcon.png"
+                        },
+                        "color": "custom.icon_color_positive"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            290,
+                            39,
+                            7,
+                            9
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "openfeint://action/dashboardPage?page=AchievementList&user_id={user.id}&user_name=[user.name]&user_picture=[user.picture]",
+                "analytics_name": "achievement.variant_a",
+                "instance_key": "achievement.{user.id}.{achievement.id}"
+            }
+        ],
+        "achievement.beforeyou": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            46,
+                            172,
+                            2
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_divider_image_portrait"
+                    },
+                    {
+                        "type": "label",
+                        "text": "<color={custom.username_color}>[user.name]</color> just unlocked {achievement.name} before you!",
+                        "frame": [
+                            76,
+                            4,
+                            147,
+                            40
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            55,
+                            50,
+                            158,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "Check it out!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            15,
+                            20,
+                            18
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarAchievementIcon.png"
+                        },
+                        "color": "custom.icon_color_negative"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            216,
+                            52,
+                            7,
+                            9
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{user.picture}"
+                        },
+                        "sharp_corners": false
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            34,
+                            237,
+                            2
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_divider_image_landscape"
+                    },
+                    {
+                        "type": "label",
+                        "text": "<color={custom.username_color}>[user.name]</color> just unlocked {achievement.name} before you!",
+                        "frame": [
+                            78,
+                            5,
+                            216,
+                            28
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            82,
+                            38,
+                            207,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "Check it out!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            10,
+                            20,
+                            18
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarAchievementIcon.png"
+                        },
+                        "color": "custom.icon_color_negative"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            290,
+                            39,
+                            7,
+                            9
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "openfeint://action/dashboardPage?page=AchievementList&user_id={user.id}&user_name=[user.name]&user_picture=[user.picture]",
+                "analytics_name": "achievement.beforeyou.variant_a",
+                "instance_key": "achievement.beforeyou.{user.id}.{achievement.id}"
+            }
+        ],
+        "login": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            11,
+                            16,
+                            38,
+                            39
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarStartOpenFeint.png"
+                        },
+                        "color": "custom.icon_color_positive"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            57,
+                            4,
+                            143,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "<color={custom.title_color}>Start OpenFeint</color>",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            57,
+                            17,
+                            143,
+                            42
+                        ],
+                        "font": "Helvetica-Oblique",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "Play with other gamers, post high scores, and unlock achievements!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            210,
+                            27,
+                            10,
+                            13
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarLargeDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            10,
+                            8,
+                            38,
+                            39
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarStartOpenFeint.png"
+                        },
+                        "color": "custom.icon_color_positive"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            56,
+                            4,
+                            216,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "<color={custom.title_color}>Start OpenFeint</color>",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            56,
+                            17,
+                            216,
+                            30
+                        ],
+                        "font": "Helvetica-Oblique",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "Play with other gamers, post high scores, and unlock achievements!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            280,
+                            21,
+                            10,
+                            13
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarLargeDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "openfeint://action/login",
+                "analytics_name": "login.variant_a",
+                "instance_key": "login"
+            }
+        ],
+        "parental_controls": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            15,
+                            17,
+                            26,
+                            32
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarParentalControlsIcon.png"
+                        },
+                        "color": "custom.icon_color_negative"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            52,
+                            6,
+                            150,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "<color=#808080>Parental controls enabled</color>",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            52,
+                            21,
+                            150,
+                            40
+                        ],
+                        "font": "Helvetica-Oblique",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "To view user content disable parental controls through your OpenFeint settings.",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            210,
+                            27,
+                            10,
+                            13
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarLargeDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            11,
+                            10,
+                            26,
+                            32
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarParentalControlsIcon.png"
+                        },
+                        "color": "custom.icon_color_negative"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            52,
+                            6,
+                            210,
+                            12
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "<color=#808080>Parental controls enabled</color>",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            52,
+                            21,
+                            220,
+                            27
+                        ],
+                        "font": "Helvetica-Oblique",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "Play with other gamers, post high scores, and unlock achievements!",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            280,
+                            21,
+                            10,
+                            13
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarLargeDisclosure.png"
+                        },
+                        "color": "custom.disclosure_color"
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "openfeint://action/dashboardPage?page=EnableParentalControls",
+                "analytics_name": "parental_controls.variant_a",
+                "instance_key": "parental_controls"
+            }
+        ],
+        "generic": [
+            {
+                "views": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            229,
+                            68
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{icon}"
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            51,
+                            4,
+                            169,
+                            40
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "{body}",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            55,
+                            49,
+                            158,
+                            14
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "{call_to_action}",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            46,
+                            172,
+                            2
+                        ],
+                        "image": "custom.cell_divider_image_portrait"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            216,
+                            51,
+                            7,
+                            9
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        }
+                    }
+                ],
+                "views_landscape": [
+                    {
+                        "type": "image",
+                        "frame": [
+                            0,
+                            0,
+                            304,
+                            54
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.cell_background_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": "custom.profile_frame_image",
+                        "color": "custom.frame_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            6,
+                            6,
+                            40,
+                            40
+                        ],
+                        "scale_to_fill": true,
+                        "image": {
+                            "url": "{icon}"
+                        }
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            54,
+                            5,
+                            237,
+                            28
+                        ],
+                        "font": "Helvetica",
+                        "font_size": 10.5,
+                        "alignment": "left",
+                        "text": "{body}",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "label",
+                        "frame": [
+                            89,
+                            37,
+                            198,
+                            14
+                        ],
+                        "font": "Helvetica-Bold",
+                        "font_size": 10.5,
+                        "alignment": "right",
+                        "text": "{call_to_action}",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            50,
+                            34,
+                            237,
+                            2
+                        ],
+                        "image": "custom.cell_divider_image_landscape"
+                    },
+                    {
+                        "type": "image",
+                        "frame": [
+                            290,
+                            39,
+                            7,
+                            9
+                        ],
+                        "framed": false,
+                        "scale_to_fill": true,
+                        "image": {
+                            "bundle": "OFGameBarSmallDisclosure.png"
+                        }
+                    }
+                ],
+                "nib": [
+                    "OFGBIEmpty",
+                    "OFGBIEmptyLandscape"
+                ],
+                "action": "{action}",
+                "analytics_name": "generic.{key}",
+                "instance_key": "generic.{id}"
+            }
+        ],
+        "generic1": [
+            {
+                "nib": [
+                    "OFGBIGeneric",
+                    "OFGBIGenericLandscape"
+                ],
+                "mappings": [
+                    {
+                        "tag": 1,
+                        "text": "{body}",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "tag": 3,
+                        "color": "custom.disclosure_color"
+                    },
+                    {
+                        "tag": 4,
+                        "text": "{call_to_action}",
+                        "color": "custom.text_color"
+                    },
+                    {
+                        "tag": 5,
+                        "color": "custom.frame_color",
+                        "image": "custom.profile_frame_image"
+                    },
+                    {
+                        "tag": 6,
+                        "image": {
+                            "url": "{icon}"
+                        }
+                    },
+                    {
+                        "tag": 7,
+                        "image": "ecustom.cell_background_image"
+                    },
+                    {
+                        "tag": 8,
+                        "image": "custom.cell_divider"
+                    }
+                ],
+                "action": "{action}",
+                "analytics_name": "generic.{key}",
+                "instance_key": "generic.{id}"
+            }
+        ]
+    }
+}

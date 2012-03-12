@@ -1,0 +1,54 @@
+section.players {
+  font-size: 14px;
+  font-weight: bold; }
+  section.players .player_wrapper {
+    overflow: hidden; }
+  section.players .game_player {
+    height: auto; }
+  section.players .center_column {
+    margin-right: 0; }
+  section.players .user_basic {
+    overflow: hidden; }
+  section.players .user_name {
+    color: #25731f;
+    float: left;
+    margin: 0 0 5px 0;
+    max-width: 170px; }
+  section.players .online .user_name {
+    color: #25731f; }
+  section.players .user_score_container {
+    margin: 0 0 5px 0;
+    overflow: hidden; }
+    section.players .user_score_container .user_score {
+      background: url(images/icon.leaf.gray.mdpi.png) no-repeat left center;
+      float: right;
+      font-size: 12px;
+      height: 12px;
+      line-height: 12px;
+      max-width: 75%;
+      overflow: hidden;
+      padding: 1px 0 0 12px;
+      text-overflow: ellipsis;
+      -webkit-background-size: 11px 12px; }
+  section.players .status {
+    color: #777777;
+    font-size: 12px;
+    font-weight: normal;
+    margin: 0; }
+
+
+/*
+ *    1.5x pixel scale
+ */
+
+body.hdpi section.players .user_score_container .user_score {
+  background: url(images/icon.leaf.gray.hdpi.png) no-repeat left center;
+}
+
+/*
+ *    2x pixel scale
+ */
+
+body.udpi section.players .user_score_container .user_score {
+  background: url(images/icon.leaf.gray.udpi.png) no-repeat left center;
+}

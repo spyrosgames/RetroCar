@@ -1,0 +1,35 @@
+#!/usr/bin/perl
+
+# PostprocessBuildPlayer #
+# Post-process build script for OpenFeint integration.
+
+use File::Basename;
+use Foundation;
+
+# Paths.
+$installPath = $ARGV[0];
+$currDir = `pwd`;
+chomp $currDir;
+$xcodeFiles = $currDir."/Assets/Editor/OpenFeint/";
+
+my $target = $ARGV[1];
+if ($target ne "iPhone") {
+	print ("\n*** Building target is not iPhone...skipping.\n"); 
+	exit;
+}
+
+# Error handling.
+sub handler
+{
+	my($msg) = @_;
+	`osascript -e \'tell application \"Finder\" to display dialog \"$msg\" buttons \"OK\"\'`;
+	die "$msg\n";
+}
+$SIG{'__DIE__'}  = \&handler;
+
+# Make sure the OpenFeint directory exists.
+opendir(XCODEPROJECTDIR, $xcodeFiles) || die("Cannot find directory $xcodeFiles");
+closedir(XCODEPROJECTDIR);
+
+# Add all necessary OpenFeint files.
+`osascript \'$currDir/Assets/Editor/OpenFeint/Xcode/UpdateXcodeWithOF.scpt\' \'$installPath\' \'$currDir\'`;

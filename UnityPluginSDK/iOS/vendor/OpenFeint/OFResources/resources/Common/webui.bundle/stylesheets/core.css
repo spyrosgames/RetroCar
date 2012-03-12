@@ -1,0 +1,357 @@
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg); }
+
+  100% {
+    -webkit-transform: rotate(360deg); } }
+
+.clearfix {
+  *display: inline-block; }
+  .clearfix:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+
+body.textured {
+  background: #e5e5e5 url(images/space.grid.mdpi.png) repeat;
+  -webkit-background-size: 8px 8px; }
+
+html, body {
+  background: transparent;
+  font-family: "Droid Sans", Helvetica, sans-serif;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
+  color: #777777;
+  -webkit-user-select: none; }
+
+#page {
+  overflow: hidden; }
+
+.eventHandle {
+  display: none; }
+
+p {
+  font-weight: bold;
+  color: #25731f; }
+
+.button {
+  font-size: 16px;
+  font-weight: normal;
+  color: #3e3e3e;
+  height: 43px;
+  margin: 20px 0;
+  padding-top: 13px;
+  padding-bottom: 5px;
+  border-width: 0 10px;
+  -webkit-border-image: url(images/button.gray.mdpi.png) 0 10 stretch stretch;
+  -webkit-box-sizing: border-box;
+  text-align: center;
+  text-shadow: none;
+  vertical-align: middle; }
+  .button.touched {
+    -webkit-border-image: url(images/button.gray.hit.mdpi.png) 0 10 stretch stretch; }
+  .button.default {
+    -webkit-border-image: url(images/button.green.mdpi.png) 0 10 stretch stretch;
+    color: white;
+    text-shadow: 0px -1px 1px rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: bold; }
+    .button.default.touched {
+      -webkit-border-image: url(images/button.green.hit.mdpi.png) 0 10 stretch stretch; }
+    .button.default .start_openfeint {
+      background: url(images/icon_check.mdpi.png) no-repeat left top;
+      margin: 0 auto;
+      padding: 0 0 0 30px;
+      -webkit-background-size: 24px 22px; }
+  .button.disabled {
+    opacity: 0.5; }
+
+.button_row {
+  width: 100%; }
+  .button_row .pretty_wide_wrapper {
+    width: 280px;
+    margin: 0 auto; }
+  .button_row .button_wrapper {
+    width: 50%;
+    float: left;
+    padding: 0 5px;
+    -webkit-box-sizing: border-box; }
+    .button_row .button_wrapper .button {
+      margin-top: 0px;
+      width: 100%;
+      -webkit-box-sizing: border-box; }
+    .button_row .button_wrapper:first-child {
+      padding-left: 0px; }
+    .button_row .button_wrapper:last-child {
+      padding-right: 0px; }
+
+#header {
+  height: 30px;
+  margin: 0;
+  padding: 0 10px 0 30px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 30px;
+  color: #4d4d4d;
+  text-shadow: #e3e3e3 0px 1px 1px;
+  border-bottom: 1px solid #2d3b2c;
+  background-image: url(images/OF_Leaf.mdpi.png), url(images/header_bg.mdpi.png);
+  background-repeat: no-repeat, repeat-x;
+  background-position: 5px 3px, top left;
+  -webkit-background-size: 22px 22px, 2px 30px; }
+  #header + * {
+    margin-top: 0; }
+  #header #home_button {
+    height: 30px; }
+  #header .loading {
+    float: right;
+    display: none; }
+    #header .loading .text {
+      display: none; }
+    #header .loading .spinner {
+      width: 18px;
+      height: 18px;
+      display: inline-block;
+      position: relative;
+      top: 2px; }
+
+.loading {
+  width: 18px;
+  height: 18px; }
+  .loading .spinner {
+    background: url(images/loading.spinner.mdpi.png) no-repeat center center;
+    -webkit-background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+    -webkit-animation-name: spinner;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear; }
+
+.content {
+  padding: 0 10px; }
+
+.input_field {
+  margin: 20px 0; }
+  .input_field label {
+    display: block;
+    font-weight: normal;
+    color: #555555;
+    margin-bottom: 4px; }
+  .input_field input[type=text], .input_field input[type=password] {
+    width: 100%;
+    height: 42px;
+    border-width: 0 10px;
+    padding: 0;
+    font-size: 18px;
+    line-height: 18px;
+    color: #3e3e3e;
+    background: transparent;
+    -webkit-box-sizing: border-box;
+    -webkit-border-image: url(images/input.text.mdpi.png) 0 10 stretch stretch; }
+    .input_field input[type=text].prompt, .input_field input[type=password].prompt {
+      color: #888888; }
+
+.inset_cell {
+  padding: 10px;
+  border: 1px solid #cfcfcf;
+  background: #e4e4e4;
+  color: #777777;
+  font-size: 16px;
+  min-height: 56px;
+  *display: inline-block;
+  background: white;
+  -webkit-border-radius: 15px; }
+  .inset_cell .image {
+    width: 56px;
+    height: 56px;
+    background-image: url(images/icon.user.male.mdpi.png);
+    -webkit-background-size: 56px 56px;
+    float: left;
+    margin-right: 10px;
+    -webkit-border-radius: 12px; }
+    .inset_cell .image .overlay {
+      width: 56px;
+      height: 56px;
+      background: url(images/frame.small.mdpi.png) no-repeat;
+      -webkit-background-size: 56px 56px; }
+  .inset_cell .title {
+    margin-top: 3px;
+    color: #25731f;
+    font-size: 22px;
+    font-weight: bold; }
+  .inset_cell .feint_score {
+    background: url(images/icon.leaf.gray.mdpi.png) no-repeat 66px center;
+    -webkit-background-size: 14px 15px;
+    padding: 4px 0 0 86px;
+    font-size: 14px; }
+  .inset_cell:after {
+    content: " ";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden; }
+  .inset_cell .title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+
+.hidden {
+  display: none !important; }
+
+.section_title, ul.cells li.section_title {
+  padding: 0 10px;
+  margin: 0;
+  height: 22px;
+  line-height: 24px;
+  font-size: 13px;
+  font-weight: bold;
+  color: white;
+  border-bottom: 1px solid #565656;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #7c7c7c), color-stop(1, #8e8e8e));
+  text-shadow: rgba(0, 0, 0, 0.15) 0px 0px 4px; }
+
+ul.cells {
+  padding: 0;
+  margin: 0;
+  list-style-type: none; }
+
+ul.cells li, .cell {
+  height: 56px;
+  padding: 8px 10px;
+  border-bottom: 1px solid #bfbfbf;
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(0, #ececec), color-stop(0.2, #f5f5f5), color-stop(1, #f7f7f7)); }
+  ul.cells li.touched, .cell.touched {
+    padding-top: 8px;
+    background: #c6e5c0;
+    border-bottom: 1px solid #22a025; }
+  ul.cells li.one_line .title, .cell.one_line .title {
+    line-height: 56px;
+    margin: 0;
+    padding: 0; }
+  ul.cells li.liquid, .cell.liquid {
+    height: auto; }
+  ul.cells li.no_data, .cell.no_data {
+    height: auto;
+    padding: 20px;
+    font-size: 13px;
+    text-align: center; }
+  ul.cells li.loading, ul.cells li .loading, .cell.loading, .cell .loading {
+    background: none;
+    border: 0;
+    width: auto;
+    height: auto;
+    padding: 20px; }
+    ul.cells li.loading .spinner, ul.cells li .loading .spinner, .cell.loading .spinner, .cell .loading .spinner {
+      display: block;
+      margin: 0 auto;
+      padding: 0;
+      height: 24px;
+      width: 24px;
+      -webkit-background-size: 24px 24px; }
+  ul.cells li .icon, .cell .icon {
+    width: 56px;
+    height: 57px;
+    margin: -1px 14px 0 0;
+    -webkit-background-size: 56px 57px;
+    background-position: center top;
+    float: left; }
+  ul.cells li .title, .cell .title {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 9px;
+    color: #595959; }
+  ul.cells li .subtitle, .cell .subtitle {
+    font-size: 15px;
+    margin-top: 0px;
+    color: #777777; }
+
+
+/*
+ *    1.5x pixel scale
+ */
+
+body.hdpi .inset_cell .feint_score {
+  background: url(images/icon.leaf.gray.hdpi.png) no-repeat 66px center;
+}
+body.hdpi.textured {
+  background: #e5e5e5 url(images/space.grid.hdpi.png) repeat;
+}
+body.hdpi .button.default {
+  -webkit-border-image: url(images/button.green.hdpi.png) 0 15 stretch stretch;
+}
+body.hdpi .inset_cell .image .overlay {
+  background: url(images/frame.small.hdpi.png) no-repeat;
+}
+body.hdpi .loading .spinner {
+  background: url(images/loading.spinner.hdpi.png) no-repeat center center;
+}
+body.hdpi #header {
+  background-image: url(images/OF_Leaf.hdpi.png), url(images/header_bg.hdpi.png);
+}
+body.hdpi .input_field input[type=text], body.hdpi .input_field input[type=password] {
+  -webkit-border-image: url(images/input.text.hdpi.png) 0 15 stretch stretch;
+}
+body.hdpi .button.default .start_openfeint {
+  background: url(images/icon_check.hdpi.png) no-repeat left top;
+}
+body.hdpi .inset_cell .image {
+  background-image: url(images/icon.user.male.hdpi.png);
+}
+body.hdpi .button.default.touched {
+  -webkit-border-image: url(images/button.green.hit.hdpi.png) 0 15 stretch stretch;
+}
+body.hdpi .button.touched {
+  -webkit-border-image: url(images/button.gray.hit.hdpi.png) 0 15 stretch stretch;
+}
+body.hdpi .button {
+  -webkit-border-image: url(images/button.gray.hdpi.png) 0 15 stretch stretch;
+}
+
+/*
+ *    2x pixel scale
+ */
+
+body.udpi .inset_cell .feint_score {
+  background: url(images/icon.leaf.gray.udpi.png) no-repeat 66px center;
+}
+body.udpi.textured {
+  background: #e5e5e5 url(images/space.grid.udpi.png) repeat;
+}
+body.udpi .button.default {
+  -webkit-border-image: url(images/button.green.udpi.png) 0 20 stretch stretch;
+}
+body.udpi .inset_cell .image .overlay {
+  background: url(images/frame.small.udpi.png) no-repeat;
+}
+body.udpi .loading .spinner {
+  background: url(images/loading.spinner.udpi.png) no-repeat center center;
+}
+body.udpi #header {
+  background-image: url(images/OF_Leaf.udpi.png), url(images/header_bg.udpi.png);
+}
+body.udpi .input_field input[type=text], body.udpi .input_field input[type=password] {
+  -webkit-border-image: url(images/input.text.udpi.png) 0 20 stretch stretch;
+}
+body.udpi .button.default .start_openfeint {
+  background: url(images/icon_check.udpi.png) no-repeat left top;
+}
+body.udpi .inset_cell .image {
+  background-image: url(images/icon.user.male.udpi.png);
+}
+body.udpi .button.default.touched {
+  -webkit-border-image: url(images/button.green.hit.udpi.png) 0 20 stretch stretch;
+}
+body.udpi .button.touched {
+  -webkit-border-image: url(images/button.gray.hit.udpi.png) 0 20 stretch stretch;
+}
+body.udpi .button {
+  -webkit-border-image: url(images/button.gray.udpi.png) 0 20 stretch stretch;
+}

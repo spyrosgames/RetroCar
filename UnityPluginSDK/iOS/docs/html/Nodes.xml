@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DocSetNodes version="1.0">
+  <TOC>
+    <Node>
+      <Name>Root</Name>
+      <Path>index.html</Path>
+      <Subnodes>
+       <Node>
+        <Name>Main Page</Name>
+        <Path>index.html</Path>
+       </Node>
+       <Node>
+        <Name>Class List</Name>
+        <Path>annotated.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>Gree.Unity.CallbackFetcherOpenFeint</Name>
+          <Path>a00001.html</Path>
+         </Node>
+         <Node>
+          <Name>Gree.Unity.CallbackFetcherOpenFeintX</Name>
+          <Path>a00002.html</Path>
+         </Node>
+         <Node>
+          <Name>Gree.Unity.CallbackFetcherOpenFeint.ChallengeDefinition</Name>
+          <Path>a00003.html</Path>
+         </Node>
+         <Node>
+          <Name>OpenFeint</Name>
+          <Path>a00004.html</Path>
+         </Node>
+         <Node>
+          <Name>OpenFeintX</Name>
+          <Path>a00005.html</Path>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>Class Index</Name>
+        <Path>classes.html</Path>
+       </Node>
+       <Node>
+        <Name>Class Members</Name>
+        <Path>functions.html</Path>
+       </Node>
+       <Node>
+        <Name>Namespace List</Name>
+        <Path>namespaces.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>Gree</Name>
+          <Path>a00011.html</Path>
+         </Node>
+         <Node>
+          <Name>Gree.Unity</Name>
+          <Path>a00012.html</Path>
+         </Node>
+        </Subnodes>
+       </Node>
+       <Node>
+        <Name>File List</Name>
+        <Path>files.html</Path>
+        <Subnodes>
+         <Node>
+          <Name>CallbackFetcherOpenFeint.cs</Name>
+          <Path>a00006.html</Path>
+         </Node>
+         <Node>
+          <Name>CallbackFetcherOpenFeintX.cs</Name>
+          <Path>a00007.html</Path>
+         </Node>
+         <Node>
+          <Name>OpenFeint.cs</Name>
+          <Path>a00008.html</Path>
+         </Node>
+         <Node>
+          <Name>OpenFeintX.cs</Name>
+          <Path>a00009.html</Path>
+         </Node>
+         <Node>
+          <Name>zEndUserGettingStarted.cs</Name>
+          <Path>a00010.html</Path>
+         </Node>
+        </Subnodes>
+       </Node>
+      </Subnodes>
+    </Node>
+  </TOC>
+</DocSetNodes>

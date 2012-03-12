@@ -1,0 +1,241 @@
+#user_profile.dashboard_page #info_cell {
+  font-size: 13px; }
+  #user_profile.dashboard_page #info_cell .user_name {
+    font-size: 14px; }
+  #user_profile.dashboard_page #info_cell .avatar {
+    height: 60px;
+    width: 60px;
+    -webkit-background-size: 55px; }
+    #user_profile.dashboard_page #info_cell .avatar .overlay {
+      height: 60px; }
+
+.dashboard_page .game_icon {
+  background: url(images/icon.game.mdpi.png) no-repeat;
+  height: 45px;
+  width: 45px;
+  -webkit-background-size: 45px; }
+.dashboard_page .user_info {
+  margin-right: 90px; }
+
+.user_info {
+  overflow: hidden; }
+  .user_info .playing {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; }
+  .user_info .notifications {
+    margin-top: 5px; }
+    .user_info .notifications .badge_button {
+      border-width: 0 2px;
+      height: 25px;
+      margin-right: 10px;
+      padding: 2px 0;
+      text-align: center;
+      width: 30px; }
+      .user_info .notifications .badge_button .badge_icon {
+        height: 100%;
+        -webkit-background-size: 16px 14px; }
+    .user_info .notifications .friends .badge_icon {
+      background: url(images/icon_addFriends.mdpi.png) no-repeat center center; }
+    .user_info .notifications .wall .badge_icon {
+      background: url(images/icon_wall.mdpi.png) no-repeat center center; }
+
+ul.cells .announcement {
+  height: auto; }
+  ul.cells .announcement .left_column {
+    width: 50px; }
+  ul.cells .announcement .center_column {
+    margin-left: 55px; }
+
+.announcement {
+  overflow: hidden; }
+  .announcement .announce_title {
+    background: url(images/dashboard/icon_announcement.mdpi.png) no-repeat;
+    color: #25731f;
+    font-size: 14px;
+    font-weight: bold;
+    padding-left: 20px;
+    -webkit-background-size: 16px; }
+  .announcement .announce_subject {
+    color: #595959;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0; }
+
+ul.who_else_playing .players {
+  height: auto; }
+ul.who_else_playing .playing_title {
+  padding: 0 0 8px 0; }
+
+.player {
+  float: left;
+  width: 24%; }
+  .player .small_profile_picture {
+    margin: 0 0 5px 4px;
+    position: relative; }
+  .player .username {
+    color: #25731f;
+    font-size: 12px;
+    font-weight: bold;
+    overflow: hidden;
+    padding: 0 4px;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 60px; }
+  .player.online .username {
+    color: #25731f; }
+  .player.friend .overlay::after {
+    background: url(images/dashboard/icon_friend_badge.mdpi.png) no-repeat;
+    bottom: -6px;
+    content: "";
+    height: 16px;
+    left: -6px;
+    position: absolute;
+    width: 16px;
+    -webkit-background-size: 16px; }
+
+.top_games .top_game {
+  float: left;
+  width: 24%; }
+.top_games .game_icon {
+  margin: 5px auto 0; }
+
+.game_channel {
+  height: auto; }
+  .game_channel .game_channel_title {
+    color: #25731f;
+    font-size: 14px;
+    font-weight: bold; }
+  .game_channel .game_channel_body {
+    color: #595959;
+    font-size: 13px;
+    font-weight: bold;
+    margin: 0; }
+
+.additional {
+  display: none; }
+
+.orientation_landscape .player {
+  width: 16%; }
+.orientation_landscape .additional {
+  display: block; }
+
+.user_info_container {
+  position: relative; }
+
+#offline {
+  color: white;
+  font-family: PTSansBold, helvetica;
+  font-weight: normal !important;
+  background: #0c814b;
+  margin: 0;
+  text-align: center; }
+  #offline h1 {
+    margin: 1px 0 12px;
+    -webkit-margin-before: 0;
+    color: white;
+    line-height: 28px; }
+  #offline p {
+    color: white;
+    margin: 8px 0; }
+  #offline .button {
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #336673), color-stop(1, #23353c));
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 2px 2px;
+    font-size: 21px;
+    padding: 0;
+    line-height: 37px;
+    padding-top: 5px;
+    -webkit-border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    -webkit-border-image: none; }
+    #offline .button.touched {
+      background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #23353c), color-stop(1, #336673)); }
+
+.orientation_portrait.ios #offline {
+  background: url(images/dashboard/offline.background.portrait.mdpi.png) transparent no-repeat;
+  -webkit-background-size: 320px 415px;
+  min-height: 424px;
+  padding: 20px; }
+  .orientation_portrait.ios #offline h1 {
+    font-size: 25px; }
+  .orientation_portrait.ios #offline .sad {
+    height: 179px;
+    -webkit-background-size: 179px 179px;
+    background: url(images/dashboard/iphone.sad.mdpi.png) center center no-repeat; }
+
+.orientation_landscape.ios #offline {
+  background: url(images/dashboard/offline.background.landscape.mdpi.png) 0 0;
+  -webkit-background-size: 480px 264x;
+  min-height: 264px;
+  padding: 10px; }
+  .orientation_landscape.ios #offline h1 {
+    font-size: 23px; }
+  .orientation_landscape.ios #offline p {
+    font-size: 14px; }
+  .orientation_landscape.ios #offline .sad {
+    height: 100px;
+    -webkit-background-size: 115px 115px;
+    background: url(images/dashboard/iphone.sad.mdpi.png) center center no-repeat; }
+
+.action_banner {
+  height: 40px;
+  padding: 4px 0;
+  position: absolute;
+  right: 0;
+  text-align: center;
+  top: 10px;
+  width: 85px; }
+  .action_banner .message {
+    font-size: 14px;
+    line-height: 14px;
+    text-shadow: 1px 1px 1px #b86c16; }
+
+.orientation_landscape .user_info {
+  margin-right: 175px; }
+.orientation_landscape .action_banner {
+  width: 170px; }
+  .orientation_landscape .action_banner .message {
+    line-height: 28px; }
+
+
+/*
+ *    1.5x pixel scale
+ */
+
+body.hdpi .player.friend .overlay::after {
+  background: url(images/dashboard/icon_friend_badge.hdpi.png) no-repeat;
+}
+body.hdpi .announcement .announce_title {
+  background: url(images/dashboard/icon_announcement.hdpi.png) no-repeat;
+}
+body.hdpi .dashboard_page .game_icon {
+  background: url(images/icon.game.hdpi.png) no-repeat;
+}
+body.hdpi .user_info .notifications .friends .badge_icon {
+  background: url(images/icon_addFriends.hdpi.png) no-repeat center center;
+}
+body.hdpi .user_info .notifications .wall .badge_icon {
+  background: url(images/icon_wall.hdpi.png) no-repeat center center;
+}
+
+/*
+ *    2x pixel scale
+ */
+
+body.udpi .player.friend .overlay::after {
+  background: url(images/dashboard/icon_friend_badge.udpi.png) no-repeat;
+}
+body.udpi .announcement .announce_title {
+  background: url(images/dashboard/icon_announcement.udpi.png) no-repeat;
+}
+body.udpi .dashboard_page .game_icon {
+  background: url(images/icon.game.udpi.png) no-repeat;
+}
+body.udpi .user_info .notifications .friends .badge_icon {
+  background: url(images/icon_addFriends.udpi.png) no-repeat center center;
+}
+body.udpi .user_info .notifications .wall .badge_icon {
+  background: url(images/icon_wall.udpi.png) no-repeat center center;
+}

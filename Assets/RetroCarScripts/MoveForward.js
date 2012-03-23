@@ -70,7 +70,7 @@ function FixedUpdate()
 			globals.cameraDampTime = currentCameraDamp - 0.185;
 			speedNumberGUIText.text = "3";
 		}
-		else if(globals.scoreCount > 600 && globals.scoreCount <= 800)
+		else if(globals.scoreCount > 600 && globals.scoreCount <= 1600)
 		{
 			globals.subtractedValueFromEnemyCarY = 9.1;
 			globals.collisionLimitSeparationDistance = 715;
@@ -79,7 +79,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = currentEnemySeparationDistance + 88.69999;
 			globals.collisionLimitSeparationDistance = 803;
 		}
-		else if(globals.scoreCount > 800 && globals.scoreCount <= 1000)
+		else if(globals.scoreCount > 1600 && globals.scoreCount <= 2000)
 		{
 			globals.subtractedValueFromEnemyCarY = 10.1;
 			//globals.collisionLimitSeparationDistance = 1000;	
@@ -88,7 +88,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = currentEnemySeparationDistance + 88.69999;
 			globals.collisionLimitSeparationDistance = 803.05;
 		}
-		else if(globals.scoreCount > 1000 && globals.scoreCount <= 1200)
+		else if(globals.scoreCount > 2000 && globals.scoreCount <= 2400)
 		{
 			globals.subtractedValueFromEnemyCarY = 11.1;	
 			globals.cameraDampTime = currentCameraDamp - 0.38;
@@ -96,7 +96,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = currentEnemySeparationDistance + 88.69999;
 			globals.collisionLimitSeparationDistance = 803.05;
 		}
-		else if(globals.scoreCount > 1200 && globals.scoreCount <= 1400)
+		else if(globals.scoreCount > 2400 && globals.scoreCount <= 2800)
 		{
 			globals.subtractedValueFromEnemyCarY = 12.5;	
 			globals.cameraDampTime = currentCameraDamp - 0.43;
@@ -104,7 +104,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = currentEnemySeparationDistance + 88.69999;
 			globals.collisionLimitSeparationDistance = 803.05;
 		}
-		else if(globals.scoreCount > 1400 && globals.scoreCount <= 1600)
+		else if(globals.scoreCount > 2800 && globals.scoreCount <= 3200)
 		{
 			globals.subtractedValueFromEnemyCarY = 13.1;	
 			globals.cameraDampTime = currentCameraDamp - 0.45;
@@ -112,7 +112,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = currentEnemySeparationDistance + 88.69999;
 			globals.collisionLimitSeparationDistance = 803.05;
 		}
-		else if(globals.scoreCount > 1600 && globals.scoreCount <= 1800)
+		else if(globals.scoreCount > 3200 && globals.scoreCount <= 3600)
 		{
 			globals.subtractedValueFromEnemyCarY = 13.5;	
 			globals.cameraDampTime = currentCameraDamp - 0.46;

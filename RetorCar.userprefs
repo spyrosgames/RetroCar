@@ -1,17 +1,17 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RetroCarScripts/Globals.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/RetroCarScripts/MoveForward.js">
     <Files>
-      <File FileName="Assets/RetroCarScripts/Globals.js" Line="175" Column="35" />
-      <File FileName="Assets/RetroCarScripts/PauseButton.js" Line="49" Column="6" />
-      <File FileName="Assets/RetroCarScripts/MoveForward.js" Line="9" Column="34" />
-      <File FileName="Assets/RetroCarScripts/RightButton.js" Line="29" Column="44" />
-      <File FileName="Assets/RetroCarScripts/LeftButton.js" Line="29" Column="44" />
-      <File FileName="Assets/RetroCarScripts/OnCollisionEnter.js" Line="207" Column="52" />
-      <File FileName="Assets/Plugins/OpenFeint/OpenFeint.cs" Line="78" Column="40" />
-      <File FileName="Assets/RetroCarScripts/HighScoresButton.js" Line="14" Column="53" />
-      <File FileName="Assets/RetroCarScripts/Instructions.js" Line="18" Column="4" />
-      <File FileName="Assets/RetroCarScripts/LaunchOpenFeintDashboard.js" Line="18" Column="34" />
+      <File FileName="Assets/RetroCarScripts/PauseButton.js" Line="69" Column="58" />
+      <File FileName="Assets/RetroCarScripts/Globals.js" Line="102" Column="13" />
+      <File FileName="Assets/RetroCarScripts/HighScoresButton.js" Line="14" Column="76" />
+      <File FileName="Assets/RetroCarScripts/OnCollisionEnter.js" Line="153" Column="5" />
+      <File FileName="Assets/RetroCarScripts/RightButton.js" Line="31" Column="5" />
+      <File FileName="Assets/RetroCarScripts/LeftButton.js" Line="31" Column="5" />
+      <File FileName="Assets/RetroCarScripts/OnTriggerEnter.js" Line="1" Column="1" />
+      <File FileName="Assets/RetroCarScripts/MoveForward.js" Line="115" Column="67" />
+      <File FileName="Assets/RetroCarScripts/Instructions.js" Line="19" Column="45" />
+      <File FileName="Assets/RetroCarScripts/AfterCrashScreen.js" Line="65" Column="28" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

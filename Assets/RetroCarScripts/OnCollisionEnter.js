@@ -139,7 +139,7 @@ function OnCollisionEnter(other : Collision)
 			LifesGUITexture.texture = globals.currentLifesGUITexture;
 			if(j == 0)
 			{
-				CollisionCamera.transform.position.y -= 2;
+				CollisionCamera.transform.position.y -= 1;
 				Animate();
 			}
 			yield WaitForSeconds(6);    
@@ -150,6 +150,7 @@ function OnCollisionEnter(other : Collision)
 			LifesGUITexture.texture = null;
 			if(j == 0)
 			{
+				CollisionCamera.transform.position.y -= 1;
 				Animate();
 				SubmitOpenFeintScore();
 			}
@@ -213,7 +214,7 @@ function SubmitOpenFeintScore()
 		OpenFeint.SubmitHighScore( (globals.scoreCount-1), globals.OpenFeintLeaderBoardID);
 		
 	} else {
-		OpenFeint.InGameNotification("The user is offline!");
+		OpenFeint.InGameNotification("You are not logged in to OpenFeint.");
 	}
 }
 function Update()

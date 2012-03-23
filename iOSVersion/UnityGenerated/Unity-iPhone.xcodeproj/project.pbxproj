@@ -175,7 +175,7 @@
 		0FFEE02FDAC6BB6FBD866825 /* ofx_ipad_icon_save_combined_large.png in Resources */ = {isa = PBXBuildFile; fileRef = 0FFEE02FDAC6BB6FBD866820 /* ofx_ipad_icon_save_combined_large.png */; };
 		0FFF7FEB0F96F3167658DCC5 /* OFContentDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0FFF7FEB0F96F3167658DCC0 /* OFContentDownloader.m */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
-		3B6215E8150EA2BD00BAA05B /* openfeint_offline_config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B6215E7150EA2BD00BAA05B /* openfeint_offline_config.xml */; };
+		3B4D1AF11510A22500414FB6 /* openfeint_offline_config.xml in Resources */ = {isa = PBXBuildFile; fileRef = 3B4D1AF01510A22500414FB6 /* openfeint_offline_config.xml */; };
 		5671AA9E1212904700ADB508 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5671AA9D1212904700ADB508 /* Icon@2x.png */; };
 		5671AA9F1212904700ADB508 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 5671AA9D1212904700ADB508 /* Icon@2x.png */; };
 		567B6200014A9F340000AA1F /* Assembly-CSharp-firstpass.dll.s in Sources */ = {isa = PBXBuildFile; fileRef = D8A1C7000E80637F100160D4 /* Assembly-CSharp-firstpass.dll.s */; };
@@ -448,7 +448,7 @@
 		0FFF8906EFC855B24019EA00 /* MyAppPluginCustomization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyAppPluginCustomization.h; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* RetroCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3B6215E7150EA2BD00BAA05B /* openfeint_offline_config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = openfeint_offline_config.xml; sourceTree = "<group>"; };
+		3B4D1AF01510A22500414FB6 /* openfeint_offline_config.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; path = openfeint_offline_config.xml; sourceTree = "<group>"; };
 		5671AA9D1212904700ADB508 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		567B6273114A9F340000AA1F /* RetroCar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RetroCar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5682F4B10F3B34FF007A219C /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
@@ -1202,7 +1202,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				3B6215E6150EA2B000BAA05B /* config */,
+				3B4D1AEF1510A20700414FB6 /* config */,
 				0FF747F344F9D8B9F42E6DA4 /* vendor */,
 				83DEA7410EACED0700D8A291 /* Default.png */,
 				86BF298411E7680B0022A4F9 /* Default@2x.png */,
@@ -1244,10 +1244,10 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3B6215E6150EA2B000BAA05B /* config */ = {
+		3B4D1AEF1510A20700414FB6 /* config */ = {
 			isa = PBXGroup;
 			children = (
-				3B6215E7150EA2BD00BAA05B /* openfeint_offline_config.xml */,
+				3B4D1AF01510A22500414FB6 /* openfeint_offline_config.xml */,
 			);
 			name = config;
 			sourceTree = "<group>";
@@ -1498,7 +1498,7 @@
 				83DEA7440EACED0700D8A291 /* Icon.png in Resources */,
 				86BF298511E7680B0022A4F9 /* Default@2x.png in Resources */,
 				5671AA9E1212904700ADB508 /* Icon@2x.png in Resources */,
-				3B6215E8150EA2BD00BAA05B /* openfeint_offline_config.xml in Resources */,
+				3B4D1AF11510A22500414FB6 /* openfeint_offline_config.xml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1648,7 +1648,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -1680,6 +1683,97 @@
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
+		};
+		3B4D1AF21510A24400414FB6 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: El Tahrir for engineering and investment consutation";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_ENABLE_CPP_EXCEPTIONS = NO;
+				GCC_ENABLE_CPP_RTTI = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_THUMB_SUPPORT = NO;
+				GCC_USE_INDIRECT_FUNCTION_CALLS = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_LDFLAGS = "-Wl,-S,-x";
+				PREBINDING = NO;
+				PRODUCT_NAME = RetroCar;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "197A81EA-4DC5-40F6-9709-A1302C9EB232";
+				SDKROOT = iphoneos;
+			};
+			name = Distribution;
+		};
+		3B4D1AF31510A24400414FB6 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				ARCHS = (
+					armv7,
+					armv6,
+				);
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../UnityPluginSDK/iOS/vendor/OpenFeint\"",
+					"\"$(SRCROOT)/../../UnityPluginSDK/iOS/vendor\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/iPhone_target_Prefix.pch;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/../../UnityPluginSDK/iOS/vendor/OpenFeint/OpenFeint.framework/Headers\"",
+					"\"$(SRCROOT)/../../UnityPluginSDK/iOS/vendor/OpenFeint\"",
+					"\"$(SRCROOT)/../../UnityPluginSDK/iOS/vendor/OFUnity.framework/Headers\"",
+					"\"$(SRCROOT)/../../UnityPluginSDK/iOS/vendor/JSONKit\"",
+				);
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+					"\"$(SRCROOT)/Libraries\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = RetroCar;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Distribution;
+		};
+		3B4D1AF41510A24400414FB6 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)";
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = Classes/iPhone_target_Prefix.pch;
+				GCC_PREPROCESSOR_DEFINITIONS = "TARGET_IPHONE_SIMULATOR=1";
+				INFOPLIST_FILE = Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 3.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\\\"$(SRCROOT)\\\"",
+					"\\\"$(SRCROOT)/Libraries\\\"",
+					"\"$(SRCROOT)/Libraries\"",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_NAME = RetroCar;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Distribution;
 		};
 		567B6271114A9F340000AA1F /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1757,7 +1851,10 @@
 		C01FCF5008A954540054247B /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				ARCHS = (
+					armv7,
+					armv6,
+				);
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_ENABLE_CPP_EXCEPTIONS = NO;
@@ -1781,28 +1878,31 @@
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				1D6058950D05DD3E006BFB54 /* Release */,
+				3B4D1AF31510A24400414FB6 /* Distribution */,
 				1D6058940D05DD3E006BFB54 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Distribution;
 		};
 		567B6270114A9F340000AA1F /* Build configuration list for PBXNativeTarget "Unity-iPhone-simulator" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				567B6271114A9F340000AA1F /* Release */,
+				3B4D1AF41510A24400414FB6 /* Distribution */,
 				567B6272114A9F340000AA1F /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Distribution;
 		};
 		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Unity-iPhone" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C01FCF5008A954540054247B /* Release */,
+				3B4D1AF21510A24400414FB6 /* Distribution */,
 				C01FCF4F08A954540054247B /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Distribution;
 		};
 /* End XCConfigurationList section */
 	};

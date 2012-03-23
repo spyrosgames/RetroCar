@@ -62,7 +62,7 @@ function Start()
 	for(var i : int = 0; i < frames.length - 1; i++)
 	{
 		AnimationPlane.renderer.material.mainTexture = frames[i];
-		yield WaitForSeconds(0.07);
+		yield WaitForSeconds(0.06);
 	}
 	
 	for(var j : int = frames.length - 1; j >= 0; j--)

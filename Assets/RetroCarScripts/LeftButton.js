@@ -4,6 +4,9 @@ var guiSkin : GUISkin;
 var car : Rigidbody;
 var LeftTouch : Joystick;
 var CollisionCamera : Camera;
+private var lastJoyPos : float = 0;
+private var isInLeft;
+private var isInRight;
 
 function Start()
 {
@@ -11,10 +14,11 @@ function Start()
 }
 
 
-function OnGUI () {
+function OnGUI() {
 	GUI.skin = guiSkin;
 	//if(GUI.Button(Rect(globals.LeftButtonX, globals.LeftButtonY, globals.LeftButtonSizeX, globals.LeftButtonSizeY), ButtonTexture))
 	var absJoyPos = Vector2(Mathf.Abs(LeftTouch.position.x), Mathf.Abs(LeftTouch.position.y));
+	/*
 	if((LeftTouch.tapCount > 0))
 	{
 		if(car != null)
@@ -24,6 +28,22 @@ function OnGUI () {
 			globals.lastCarPositionY = car.position.y;
 		}
 	}
+	*/
+
+	if((absJoyPos.x > 0))
+	//if(absJoyPos.x > absJoyPos.y && absJoyPos.x > 0)
+	{
+		if(car != null)
+		{
+			//Move to Left
+			car.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
+			car.position = Vector3(34.4553, car.position.y, -7.433446);
+			globals.lastCarPositionY = car.position.y;
+		}
+	}
+		
+
+	//Accelerate
 	if((LeftTouch.tapCount > 0) && (absJoyPos.y > absJoyPos.x))
 	{
 		globals.accelerateButtonPressed = true;

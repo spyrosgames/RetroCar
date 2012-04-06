@@ -3,6 +3,10 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 
 Project("{C43350CA-E29F-7D64-A9B0-0A110E66D010}") = "RetorCar", "Assembly-CSharp-firstpass-vs.csproj", "{DB88AE6E-8159-98EF-439C-E431271279E0}"
 EndProject
+Project("{C43350CA-E29F-7D64-A9B0-0A110E66D010}") = "RetorCar", "Assembly-CSharp-vs.csproj", "{1856CCD9-0218-5AD4-F8DC-CA1315CB1E0C}"
+EndProject
+Project("{C43350CA-E29F-7D64-A9B0-0A110E66D010}") = "RetorCar", "Assembly-CSharp-Editor-vs.csproj", "{2A1F3382-1822-25DB-C3AD-8675CF71B6B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +17,14 @@ Global
 		{DB88AE6E-8159-98EF-439C-E431271279E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DB88AE6E-8159-98EF-439C-E431271279E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB88AE6E-8159-98EF-439C-E431271279E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1856CCD9-0218-5AD4-F8DC-CA1315CB1E0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1856CCD9-0218-5AD4-F8DC-CA1315CB1E0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1856CCD9-0218-5AD4-F8DC-CA1315CB1E0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1856CCD9-0218-5AD4-F8DC-CA1315CB1E0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A1F3382-1822-25DB-C3AD-8675CF71B6B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A1F3382-1822-25DB-C3AD-8675CF71B6B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A1F3382-1822-25DB-C3AD-8675CF71B6B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A1F3382-1822-25DB-C3AD-8675CF71B6B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

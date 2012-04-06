@@ -44,9 +44,41 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\Base\CallbackFetcherBase.cs" />
+     <Compile Include="Assets\Plugins\Base\CallbackFetcherFactory.cs" />
+     <Compile Include="Assets\Plugins\Base\Define.cs" />
+     <Compile Include="Assets\Plugins\Base\GameObjectManagerInitializer.cs" />
+     <Compile Include="Assets\Plugins\Base\ICallback.cs" />
+     <Compile Include="Assets\Plugins\Base\IUnityToNativeMessage.cs" />
+     <Compile Include="Assets\Plugins\Base\NativeToUnity.cs" />
+     <Compile Include="Assets\Plugins\Base\UnityToJavaMessage.cs" />
+     <Compile Include="Assets\Plugins\Base\UnityToNative.cs" />
+     <Compile Include="Assets\Plugins\Base\UnityToNativeMessageManager.cs" />
+     <Compile Include="Assets\Plugins\Base\UnityToObjCMessage.cs" />
+     <Compile Include="Assets\Plugins\Base\UnityToPlatformUnsupportedMessage.cs" />
+     <Compile Include="Assets\Plugins\Base\minijson_143.cs" />
+     <Compile Include="Assets\Plugins\OpenFeint\CallbackFetcherOpenFeint.cs" />
+     <Compile Include="Assets\Plugins\OpenFeint\CallbackFetcherOpenFeintX.cs" />
+     <Compile Include="Assets\Plugins\OpenFeint\OpenFeint.cs" />
+     <Compile Include="Assets\Plugins\OpenFeint\OpenFeintX.cs" />
+     <Compile Include="Assets\Plugins\Properties\CallbackFetcherProperties.cs" />
+     <Compile Include="Assets\Plugins\Properties\IPropertiesCustomization.cs" />
+     <Compile Include="Assets\Plugins\Properties\Properties.cs" />
+     <Compile Include="Assets\Plugins\Properties\UnityToNativeProperties.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\General Scripts\ActivateTrigger.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\CombineChildren.cs" />
      <Compile Include="Assets\Standard Assets\Scripts\Utility Scripts\MeshCombineUtility.cs" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Detail.shader" />
+     <None Include="Assets\Plugins\Properties\properties.json.txt" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Particles Additive Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Vertex Colored.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
+     <None Include="Assets\Resources\GamePreferences\properties.json.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

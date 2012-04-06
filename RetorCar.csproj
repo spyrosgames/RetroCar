@@ -104,6 +104,7 @@
      <None Include="Assets\RetroCarScripts\RightButton.js" />
      <None Include="Assets\RetroCarScripts\ScoreIncrease.js" />
      <None Include="Assets\RetroCarScripts\StartSound.js" />
+     <None Include="Assets\RetroCarScripts\Swipe.js" />
      <None Include="Assets\RetroCarScripts\TapGUITexture.js" />
      <None Include="Assets\RetroCarScripts\ToFollowObjectPush.js" />
      <None Include="Assets\Standard Assets\Scripts\Camera Scripts\MouseOrbit.js" />

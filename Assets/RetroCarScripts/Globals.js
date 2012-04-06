@@ -101,6 +101,12 @@ class Globals
 	
 	public var lastCarPositionY : float;
 	
+	public var carAtLeft : boolean = false;
+	public var carAtRight : boolean = false;
+	public var carAtCenter : boolean = true;
+
+	public var currentCarXPosition : float = 81.01407;
+
 	private static var Instance : Globals;
 	
 	protected function Globals()
@@ -118,6 +124,7 @@ class Globals
 		collisionLimitSeparationDistance = 712;
 		
 		enemyCarX = 126.0737;
+		//enemyCarX = 218.6932;
 		enemyCarY = 136.0381;
 		enemyCarZ = -7.433446;
 		

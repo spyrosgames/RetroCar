@@ -44,15 +44,56 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Images\MoveBackward.js" />
-     <Compile Include="Assets\Scripts\CameraFollow.js" />
-     <Compile Include="Assets\Scripts\Globals.js" />
-     <Compile Include="Assets\Scripts\LifesGUITextureSetter.js" />
-     <Compile Include="Assets\Scripts\MoveForward.js" />
-     <Compile Include="Assets\Scripts\OnCollisionEnter.js" />
-     <Compile Include="Assets\Scripts\OnTriggerEnter.js" />
-     <Compile Include="Assets\Scripts\ScoreIncrease.js" />
-     <Compile Include="Assets\Scripts\ToFollowObjectPush.js" />
+     <Compile Include="Assets\RetroCarScripts\AccelerateButton.js" />
+     <Compile Include="Assets\RetroCarScripts\AfterCrashScreen.js" />
+     <Compile Include="Assets\RetroCarScripts\CameraFollow.js" />
+     <Compile Include="Assets\RetroCarScripts\CarEngineSound.js" />
+     <Compile Include="Assets\RetroCarScripts\CrashAnimation.js" />
+     <Compile Include="Assets\RetroCarScripts\DestroyClones.js" />
+     <Compile Include="Assets\RetroCarScripts\DontDestroyOnLoad.js" />
+     <Compile Include="Assets\RetroCarScripts\Globals.js" />
+     <Compile Include="Assets\RetroCarScripts\HighScoresButton.js" />
+     <Compile Include="Assets\RetroCarScripts\Instructions.js" />
+     <Compile Include="Assets\RetroCarScripts\LaunchOpenFeintDashboard.js" />
+     <Compile Include="Assets\RetroCarScripts\LeftButton.js" />
+     <Compile Include="Assets\RetroCarScripts\LifesGUITextureSetter.js" />
+     <Compile Include="Assets\RetroCarScripts\LockOrienatation.js" />
+     <Compile Include="Assets\RetroCarScripts\MoveBackward.js" />
+     <Compile Include="Assets\RetroCarScripts\MoveCameraForward.js" />
+     <Compile Include="Assets\RetroCarScripts\MoveForward.js" />
+     <Compile Include="Assets\RetroCarScripts\OnCollisionEnter.js" />
+     <Compile Include="Assets\RetroCarScripts\OnTriggerEnter.js" />
+     <Compile Include="Assets\RetroCarScripts\OpenFeintStuff.js" />
+     <Compile Include="Assets\RetroCarScripts\PauseButton.js" />
+     <Compile Include="Assets\RetroCarScripts\PlayButton.js" />
+     <Compile Include="Assets\RetroCarScripts\RightButton.js" />
+     <Compile Include="Assets\RetroCarScripts\ScoreIncrease.js" />
+     <Compile Include="Assets\RetroCarScripts\StartSound.js" />
+     <Compile Include="Assets\RetroCarScripts\TapGUITexture.js" />
+     <Compile Include="Assets\RetroCarScripts\ToFollowObjectPush.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\CameraRelativeControl.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FirstPersonControl.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\FollowTransform.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\Joystick.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\ObliqueNear.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\PlayerRelativeControl.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\RollABall.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\RotationConstraint.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\SidescrollControl.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\SmoothFollow2D.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\TapControl.js" />
+     <Compile Include="Assets\Standard Assets (Mobile)\Scripts\ZoomCamera.js" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Multiply Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Background.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Transparent Vertex Color.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Miscellaneous Shaders\Mobile Detail.shader" />
+     <None Include="Assets\Plugins\Properties\properties.json.txt" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Reflective.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Particle Shaders\Mobile Particles Additive Culled.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Vertex Colored Shaders\Mobile Vertex Colored.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap Only.shader" />
+     <None Include="Assets\Standard Assets (Mobile)\Shaders\Lightmap Shaders (Legacy)\Mobile Lightmap AlphaTest.shader" />
+     <None Include="Assets\Resources\GamePreferences\properties.json.txt" />
  <Reference Include="Library\ScriptAssemblies\Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
  </Reference>

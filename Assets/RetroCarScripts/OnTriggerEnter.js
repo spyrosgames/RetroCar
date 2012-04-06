@@ -11,7 +11,10 @@ var collisionLimitPrefab : GameObject;
 
 private var enemyCarRightPosition : float;
 private var enemyCarLeftPosition : float;
+private var enemyCarCenterPosition : float;
 private var enemyCarPositions : float[];
+private var secondEnemyCarPositions : float[];
+
 private var randomEnemyCarPosition : float;
 private var gridClone;
 private var enemyCarClone : GameObject;
@@ -22,6 +25,7 @@ private var leftPavementClone;
 private var collisionLimitClone : GameObject;
 private var collisionLimitCloneArray : GameObject[];
 private var timesOnTriggerExitCalled : int;
+private var probabilityOfSecondCarHappening : int;
 /*
 function Awake()
 {
@@ -32,9 +36,15 @@ function Awake()
 function Start()
 {
 	globals = Globals.GetInstance();
+	
 	enemyCarRightPosition = -(globals.enemyCarX - 114);
 	enemyCarLeftPosition = globals.enemyCarX;
+	enemyCarCenterPosition = 81.01407;
+
 	enemyCarPositions = [enemyCarRightPosition, enemyCarLeftPosition];
+
+	secondEnemyCarPositions = [enemyCarLeftPosition, enemyCarRightPosition];
+
 	Debug.Log("Start called.");
 	globals.spawned = true;
 }
@@ -42,11 +52,35 @@ function Start()
 function OnTriggerExit(other : Collider)
 {
 	randomEnemyCarPosition = Random.Range(0, 2);
+	probabilityOfSecondCarHappening = Random.Range(0, 2);
 
 	gridClone = Instantiate(Resources.Load("GridPrefab"), Vector3(globals.gridX, globals.gridY - (globals.gridSeparationDistance*globals.i), globals.gridZ), Quaternion.Euler(Vector3(0, 0, 0)));
-	
-	enemyCarClone = Instantiate(Resources.Load("EnemyCarPrefab"), Vector3(enemyCarPositions[randomEnemyCarPosition], globals.enemyCarY-(globals.enemySeparationDistance*globals.i), globals.enemyCarZ), Quaternion.Euler(Vector3(270, 0, 0)));
-	enemyCarClone.rigidbody.isKinematic = true;
+
+	if(globals.scoreCount < 1000)
+	{
+		enemyCarClone = Instantiate(Resources.Load("EnemyCarPrefab"), Vector3(enemyCarPositions[randomEnemyCarPosition], globals.enemyCarY-(globals.enemySeparationDistance*globals.i), globals.enemyCarZ), Quaternion.Euler(Vector3(270, 0, 0)));
+		
+			topColliderClone = Instantiate(topCollider, Vector3(globals.topColliderX, globals.topColliderY - (globals.gridSeparationDistance*globals.i - 300), globals.topColliderZ), Quaternion.Euler(Vector3(270, 0, 0)));
+			topColliderClone.tag = "topColliderClones";
+
+	}
+	if(globals.scoreCount >= 1000 && globals.scoreCount <= 5000)
+	{
+		enemyCarClone = Instantiate(Resources.Load("EnemyCarPrefab"), Vector3(enemyCarPositions[randomEnemyCarPosition], globals.enemyCarY-(globals.enemySeparationDistance*globals.i), globals.enemyCarZ), Quaternion.Euler(Vector3(270, 0, 0)));
+		enemyCarClone.rigidbody.isKinematic = true;
+		enemyCarClone.tag = "EnemyCar";
+
+		if(probabilityOfSecondCarHappening == 1)
+		{
+			secondEnemyCarClone = Instantiate(Resources.Load("EnemyCarPrefab"), Vector3(secondEnemyCarPositions[randomEnemyCarPosition], globals.enemyCarY-(globals.enemySeparationDistance*globals.i) + 440, globals.enemyCarZ), Quaternion.Euler(Vector3(270, 0, 0)));
+			secondEnemyCarClone.rigidbody.isKinematic = true;
+			secondEnemyCarClone.tag = "EnemyCar";
+		}	
+		topColliderClone = Instantiate(topCollider, Vector3(globals.topColliderX, globals.topColliderY - (globals.gridSeparationDistance*globals.i - 200), globals.topColliderZ), Quaternion.Euler(Vector3(270, 0, 0)));
+		topColliderClone.tag = "topColliderClones";
+	}
+
+	/*
 	if(randomEnemyCarPosition == 0)
 	{
 		enemyCarClone.rigidbody.transform.position.x = 126.0737;
@@ -55,14 +89,14 @@ function OnTriggerExit(other : Collider)
 	{
 		enemyCarClone.rigidbody.transform.position.x = -12.11494;
 	}
-	enemyCarClone.tag = "EnemyCar";
+	*/
 	
+
 	//secondEnemyCarClone = Instantiate(secondEnemyCarPrefab, Vector3(enemyCarPositions[randomEnemyCarPosition], globals.secondEnemyCarY-(globals.enemySeparationDistance*globals.i), globals.secondEnemyCarZ), Quaternion.Euler(Vector3(270, 0, 0)));
 	//secondEnemyCarClone.rigidbody.isKinematic = true;
 	//secondEnemyCarClone.tag = "EnemyCar";
 	
-	topColliderClone = Instantiate(topCollider, Vector3(globals.topColliderX, globals.topColliderY - (globals.gridSeparationDistance*globals.i - 400), globals.topColliderZ), Quaternion.Euler(Vector3(270, 0, 0)));
-	topColliderClone.tag = "topColliderClones";
+
 	
 	rightPavementClone = Instantiate(Resources.Load("RightPavementPrefab"), Vector3(globals.rightPavementX, globals.rightPavementY - (globals.gridSeparationDistance*globals.i), globals.rightPavementZ), Quaternion.Euler(Vector3(0, 0, 0)));
 	leftPavementClone = Instantiate(Resources.Load("LeftPavementPrefab"), Vector3(globals.leftPavementX, globals.leftPavementY - (globals.gridSeparationDistance*globals.i), globals.leftPavementZ), Quaternion.Euler(Vector3(0, 0, 0)));

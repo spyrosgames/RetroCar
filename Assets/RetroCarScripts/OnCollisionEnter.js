@@ -24,6 +24,7 @@ private var thisOtherZ;
 
 private var retroCarHeadYDimension;
 private var collisionSeparatorYDimension;
+private var collisionSeparatorSecondCarYDimension;
 
 var carComponents : GameObject[];
 var MainCamera : GameObject;
@@ -32,6 +33,7 @@ var SecondMainCamera : GameObject;
 
 private var timesSetOtherDimensionsCalled : int;
 private var timesSetYDimensionsCalled : int;
+private var timesSetSecondCarYDimensionsCalled : int;
 private var timesCrashSoundPlayed : int;
 private var timesOpenFeintSubmitScoreCalled : int;
 private var asyncOperation : AsyncOperation;
@@ -41,7 +43,7 @@ public var retroCarHead : GameObject;
 var audioClip : AudioClip;
 private var currentCameraDamp : float;
 private var j : int = 0;
-
+private var k : int = 0;
 function Awake()
 {
 	
@@ -100,8 +102,20 @@ function OnCollisionEnter(other : Collision)
 	SecondMainCamera.active = true;
 	
 	var collisionLimits = GameObject.FindGameObjectsWithTag("CollisionLimit");
-	setYDimensions(retroCarHead.transform.position.y, collisionLimits[globals.i-2].transform.position.y);
+	var secondCollisionLimits = GameObject.FindGameObjectsWithTag("SecondCollisionLimit");
+
 	setOtherDimensions(other, other.transform.position.x, other.transform.position.y, other.transform.position.z);
+
+	if(globals.scoreCount < 1000)
+	{
+		setYDimensions(retroCarHead.transform.position.y, collisionLimits[globals.i - 2].transform.position.y);
+	}
+	if(globals.scoreCount >= 1000)
+	{
+		setYDimensions(retroCarHead.transform.position.y, collisionLimits[globals.i - 2].transform.position.y);
+		//setSecondCarYDimensions(retroCarHead.transform.position.y, secondCollisionLimits[globals.i - 3].transform.position.y);
+		//setSecondCarYDimensions(retroCarHead.transform.position.y, thisOtherY - 129);
+	}
 	
 	for(var i : int = 0; i < carComponents.length; i++)
 	{
@@ -118,7 +132,7 @@ function OnCollisionEnter(other : Collision)
 	
 	if(other.gameObject.tag == "EnemyCar")
 	{
-		
+		Debug.Log("Crashed");
 		if(globals.lifesCount != 0)
 		{
 			if(globals.lifesCount == 3)
@@ -140,6 +154,7 @@ function OnCollisionEnter(other : Collision)
 			if(j == 0)
 			{
 				CollisionCamera.transform.position.y -= 1;
+				//CollisionCamera.transform.position.y = other.transform.position.y;
 				Animate();
 			}
 			yield WaitForSeconds(6);    
@@ -151,6 +166,7 @@ function OnCollisionEnter(other : Collision)
 			if(j == 0)
 			{
 				CollisionCamera.transform.position.y -= 1;
+				//CollisionCamera.transform.position.y = other.transform.position.y;
 				Animate();
 				SubmitOpenFeintScore();
 			}
@@ -158,7 +174,51 @@ function OnCollisionEnter(other : Collision)
 		//Application.LoadLevel("two");
 		//Destroy(gameObject);
 	}
+	if(other.gameObject.tag == "SecondEnemyCar")
+	{
+		setOtherDimensions(other, other.transform.position.x, other.transform.position.y, other.transform.position.z);
+		if(globals.lifesCount != 0)
+		{
+			if(globals.lifesCount == 3)
+			{
+				globals.currentLifesGUITexture = threeLifesGUITexture;
+				PlayerPrefs.SetInt("lifesGUITexture", 3);
+			}
+			else if(globals.lifesCount == 2)
+			{
+				globals.currentLifesGUITexture = twoLifesGUITexture;
+				PlayerPrefs.SetInt("lifesGUITexture", 2);
+			}
+			else if(globals.lifesCount == 1)
+			{
+				globals.currentLifesGUITexture = oneLifeGUITexture;
+				PlayerPrefs.SetInt("lifesGUITexture", 1);
+			}
+			LifesGUITexture.texture = globals.currentLifesGUITexture;
+			if(k == 0)
+			{
+				CollisionCamera.transform.position.y -= 1;
+				//CollisionCamera.transform.position.y = other.transform.position.y;
+				SecondAnimate();
+			}
+			yield WaitForSeconds(6);    
+		}
+		else
+		{
+			PlayerPrefs.SetInt("lifesGUITexture", 0);
+			LifesGUITexture.texture = null;
+			if(k == 0)
+			{
+				CollisionCamera.transform.position.y -= 1;
+				//CollisionCamera.transform.position.y = other.transform.position.y;
+				SecondAnimate();
+				SubmitOpenFeintScore();
+			}
+		}
+	}
+
 	j++;
+	k++;
 	
 }
 
@@ -167,15 +227,16 @@ function Animate()
 
 	PlayCrashSound();
 	AnimationPlane.renderer.enabled = true;
-	if( (retroCarHeadYDimension > collisionSeparatorYDimension) || (thisOtherY == -3435.462) || (thisOtherY == -4149.762)) //because of negative values, > and < are inverted.
+	if( (retroCarHeadYDimension > collisionSeparatorYDimension) || (retroCarHeadYDimension > collisionSeparatorYDimension) || (thisOtherY == -3435.462) || (thisOtherY == -4149.762)) //because of negative values, > and < are inverted.
 	{
 		AnimationPlane.transform.position.x = thisOtherX + 37;
 		AnimationPlane.transform.position.y = thisOtherY;
 		AnimationPlane.transform.position.z = thisOtherZ;
 	}
-	else if(retroCarHeadYDimension < collisionSeparatorYDimension)
+	else if( (retroCarHeadYDimension < collisionSeparatorYDimension) || (retroCarHeadYDimension > thisOtherY))  //Right And Left
 	{
-		if(thisOther.transform.position.x == 126.0737)
+		//if(thisOther.transform.position.x == 126.0737)
+		if(thisOther.transform.position.x >= 126)	
 		{
 			//AnimationPlane.transform.position.x = thisOtherX-100;
 			AnimationPlane.transform.position.x = thisOtherX-100;
@@ -189,6 +250,89 @@ function Animate()
 			AnimationPlane.transform.position.z = thisOtherZ;
 		}
 	}
+	AnimationPlane.renderer.material.mainTexture = frames[0];
+	yield WaitForSeconds(0.8);
+	AnimationPlane.renderer.material.mainTexture = frames[1];
+	yield WaitForSeconds(0.8);
+	AnimationPlane.renderer.material.mainTexture = frames[0];
+	yield WaitForSeconds(0.8);
+	AnimationPlane.renderer.material.mainTexture = frames[1];
+	yield WaitForSeconds(0.8);
+	AnimationPlane.renderer.material.mainTexture = frames[0];
+	yield WaitForSeconds(0.8);
+	AnimationPlane.renderer.material.mainTexture = frames[1];
+	yield WaitForSeconds(0.8);
+	SetTouchesState(true);	
+	asyncOperation = Application.LoadLevelAsync("two");
+
+	yield WaitForSeconds(0.6);
+}
+
+function SecondAnimate()
+{
+
+	PlayCrashSound();
+	AnimationPlane.renderer.enabled = true;
+	/*
+	if( (retroCarHeadYDimension > collisionSeparatorYDimension) || (retroCarHeadYDimension > collisionSeparatorYDimension) || (thisOtherY == -3435.462) || (thisOtherY == -4149.762)) //because of negative values, > and < are inverted.
+	{
+		AnimationPlane.transform.position.x = thisOtherX + 37;
+		AnimationPlane.transform.position.y = thisOtherY;
+		AnimationPlane.transform.position.z = thisOtherZ;
+	}
+	else if( (retroCarHeadYDimension < collisionSeparatorYDimension) || (retroCarHeadYDimension > thisOtherY))  //Right And Left
+	{
+		//if(thisOther.transform.position.x == 126.0737)
+		if(thisOther.transform.position.x >= 126)	
+		{
+			//AnimationPlane.transform.position.x = thisOtherX-100;
+			AnimationPlane.transform.position.x = thisOtherX-100;
+			AnimationPlane.transform.position.y = thisOtherY-180;
+			AnimationPlane.transform.position.z = thisOtherZ;
+		}
+		else
+		{
+			AnimationPlane.transform.position.x = thisOtherX+180;
+			AnimationPlane.transform.position.y = thisOtherY-180;
+			AnimationPlane.transform.position.z = thisOtherZ;
+		}
+	}
+	*/
+
+	if((thisOther.transform.position.x >= 126))	
+	{
+		//AnimationPlane.transform.position.x = thisOtherX-100;
+		if(retroCarHead.transform.position.y < (thisOther.transform.position.y - 129))
+		{
+			AnimationPlane.transform.position.x = thisOtherX-100;
+			AnimationPlane.transform.position.y = thisOtherY-180;
+			AnimationPlane.transform.position.z = thisOtherZ;	
+		}
+		else
+		{
+			AnimationPlane.transform.position.x = thisOtherX + 37;
+			AnimationPlane.transform.position.y = thisOtherY;
+			AnimationPlane.transform.position.z = thisOtherZ;
+		}
+
+	}
+	else if((thisOther.transform.position.x <= -12))
+	{
+		
+		if(retroCarHead.transform.position.y < (thisOther.transform.position.y - 129))
+		{
+			AnimationPlane.transform.position.x = thisOtherX+180;
+			AnimationPlane.transform.position.y = thisOtherY-180;
+			AnimationPlane.transform.position.z = thisOtherZ;
+		}
+		else
+		{
+			AnimationPlane.transform.position.x = thisOtherX + 37;
+			AnimationPlane.transform.position.y = thisOtherY;
+			AnimationPlane.transform.position.z = thisOtherZ;
+		}
+	}
+	
 	AnimationPlane.renderer.material.mainTexture = frames[0];
 	yield WaitForSeconds(0.8);
 	AnimationPlane.renderer.material.mainTexture = frames[1];
@@ -240,6 +384,16 @@ function setYDimensions(retroCarHeadY : float, collisionSeparatorY : float)
 	{
 		retroCarHeadYDimension = retroCarHeadY;
 		collisionSeparatorYDimension = collisionSeparatorY;
+	}
+}
+
+function setSecondCarYDimensions(retroCarHeadY : float, collisionSeparatorY : float)
+{
+	timesSetSecondCarYDimensionsCalled++;
+	if(timesSetSecondCarYDimensionsCalled == 1)
+	{
+		retroCarHeadYDimension = retroCarHeadY;
+		collisionSeparatorSecondCarYDimension = collisionSeparatorY;
 	}
 }
 

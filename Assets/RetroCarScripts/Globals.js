@@ -121,6 +121,7 @@ class Globals
 		
 		gridSeparationDistance = 803;
 		enemySeparationDistance = 714.29999;
+
 		collisionLimitSeparationDistance = 712;
 		
 		enemyCarX = 126.0737;

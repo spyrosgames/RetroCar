@@ -22,19 +22,19 @@ function Update () {
 	var absJoyPos = Vector2(Mathf.Abs(RightTouch.position.x), Mathf.Abs(RightTouch.position.y));
 
 	//Move to Left
-	if((RightTouch.position.x < -0.025) || Input.GetKey(KeyCode.LeftArrow))
+	if((RightTouch.position.x < -0.03) || Input.GetKey(KeyCode.LeftArrow))
 	//if(absJoyPos.x > absJoyPos.y && absJoyPos.x > 0)
 	{
 		if(car != null)
 		{
-
+			if(globals.accelerateButtonPressed ==false)
+			{
 			//Move to Left
 			car.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
-
 			car.position = Vector3(126, car.position.y, -7.433446);
-
 				//car.position = Vector3(81.01407, car.position.y, -7.433446);
 			globals.lastCarPositionY = car.position.y;
+			}
 		}
 
 	}
@@ -44,30 +44,42 @@ function Update () {
 	{
 		if(car != null)
 		{
+			if(globals.accelerateButtonPressed == false)
+			{
 			//Move to Right
 			car.constraints = RigidbodyConstraints.FreezePositionY | RigidbodyConstraints.FreezePositionZ;
-
-
 			car.position = Vector3(-12, car.position.y, -7.433446); //Move one step to right
-
-
 			globals.lastCarPositionY = car.position.y;
+			}
 		}
 	}
 
 	//if((RightTouch.tapCount > 0) && (absJoyPos.y > absJoyPos.x))
-	if( (RightTouch.position.x < -0.035 && RightTouch.position.y > 0) )
+	if(absJoyPos.y > absJoyPos.x)
+	{
+		if(globals.accelerateButtonPressed)
+		{
+			car.position = Vector3(car.position.x, car.position.y-(globals.subtractedValueFromEnemyCarY/2), car.position.z);
+		}
+		//CollisionCamera.transform.position.y -= 2;
+	}
+
+	if(absJoyPos.x > absJoyPos.y || absJoyPos.x == absJoyPos.y)
+	{
+		globals.accelerateButtonPressed = false;
+	}
+	else
+	{
+		globals.accelerateButtonPressed = true;
+	}
+	/*
+	if( (RightTouch.position.x > 0.001 && RightTouch.position.y > 0) )
 	{
 		globals.accelerateButtonPressed = true;
 		car.position = Vector3(car.position.x, car.position.y-(globals.subtractedValueFromEnemyCarY/2), car.position.z);
 		//CollisionCamera.transform.position.y -= 2;
 	}
-	if( (RightTouch.position.x > 0.035 && RightTouch.position.y > 0) )
-	{
-		globals.accelerateButtonPressed = true;
-		car.position = Vector3(car.position.x, car.position.y-(globals.subtractedValueFromEnemyCarY/2), car.position.z);
-		//CollisionCamera.transform.position.y -= 2;
-	}
+	*/
 }
 function Wait()
 {

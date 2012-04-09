@@ -27,8 +27,10 @@ function OnGUI()
 	GUI.skin = guiSkin;
 	if(GUI.Button(Rect(globals.PauseButtonX, globals.PauseButtonY, globals.PauseButtonSizeX, globals.PauseButtonSizeY), currentButtonTexture))
 	{
-		audio.PlayOneShot(audioClip);
-		
+		if(!globals.muted)
+		{
+			audio.PlayOneShot(audioClip);
+		}
 		if(!paused)
 		{
 			if(retroCar != null)

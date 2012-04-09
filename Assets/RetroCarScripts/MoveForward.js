@@ -14,7 +14,8 @@ var MainCamera : Camera;
 function Awake()
 {
 	globals = Globals.GetInstance();
-	audio.clip = audioClip;
+	globals.engineAudio = audioClip;
+	audio.clip = globals.engineAudio;
 	audio.playOnAwake = true;
 	audio.loop = true;
 	if(globals.muted == false)
@@ -46,6 +47,7 @@ function Update()
 		car.position = Vector3(126, car.position.y, -7.433446);
 	}
 	MainCamera.transform.position.x=0.5351226;
+	audio.pitch = globals.audioPitch;
 }
 function FixedUpdate()
 {
@@ -145,6 +147,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
+			CollisionCamera.transform.position.y -= 1;
 		}
 		else if(globals.scoreCount > 6000 && globals.scoreCount <= 7000)
 		{
@@ -161,6 +164,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
+			CollisionCamera.transform.position.y -= 1;
 		}
 		else if(globals.scoreCount > 7000 && globals.scoreCount <= 8000)
 		{
@@ -177,6 +181,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
+			CollisionCamera.transform.position.y -= 1;
 		}
 		else if(globals.scoreCount > 8000 && globals.scoreCount <= 9000)
 		{
@@ -193,6 +198,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
+			CollisionCamera.transform.position.y -= 1;
 		}
 		else
 		{
@@ -209,6 +215,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
+			CollisionCamera.transform.position.y -= 1;
 		}
 		car.transform.position = Vector3(car.position.x, car.position.y-globals.subtractedValueFromEnemyCarY, car.position.z);
 		//MainCamera.transform.Translate(Vector3(0, -((car.position.y-globals.subtractedValueFromEnemyCarY)/50), 0));

@@ -107,6 +107,10 @@ class Globals
 
 	public var currentCarXPosition : float = 81.01407;
 
+	public var engineAudio : AudioClip;
+
+	public var audioPitch : float;
+
 	private static var Instance : Globals;
 	
 	protected function Globals()
@@ -190,6 +194,7 @@ class Globals
 		
 		OpenFeintLeaderBoardID = 1107467;
 		
+		audioPitch = 0.75;
 	}
 	
 	public static function GetInstance() : Globals

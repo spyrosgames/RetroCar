@@ -78,7 +78,7 @@ function FixedUpdate()
 			speedNumberGUIText.text = "2";
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			globals.collisionLimitSeparationDistance = 803.05;
-			CollisionCamera.transform.position.y += 1;
+			
 		}
 		else if(globals.scoreCount > 2000 && globals.scoreCount <= 3000)
 		{
@@ -94,7 +94,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
-			CollisionCamera.transform.position.y -= 0.125;
+			//CollisionCamera.transform.position.y -= 0.125;
 		}
 		else if(globals.scoreCount > 3000 && globals.scoreCount <= 4000)
 		{
@@ -112,7 +112,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
-			CollisionCamera.transform.position.y -= 1;
+			//CollisionCamera.transform.position.y -= 1;
 		}
 		else if(globals.scoreCount > 4000 && globals.scoreCount <= 5000)
 		{
@@ -130,7 +130,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
-			CollisionCamera.transform.position.y -= 1;
+			//CollisionCamera.transform.position.y -= 1;
 		}
 		else if(globals.scoreCount > 5000 && globals.scoreCount <= 6000)
 		{
@@ -147,7 +147,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
-			CollisionCamera.transform.position.y -= 1;
+			//CollisionCamera.transform.position.y -= 1;
 		}
 		else if(globals.scoreCount > 6000 && globals.scoreCount <= 7000)
 		{
@@ -164,7 +164,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
-			CollisionCamera.transform.position.y -= 1;
+			//CollisionCamera.transform.position.y -= 1;
 		}
 		else if(globals.scoreCount > 7000 && globals.scoreCount <= 8000)
 		{
@@ -181,7 +181,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
-			CollisionCamera.transform.position.y -= 1;
+			//CollisionCamera.transform.position.y -= 1;
 		}
 		else if(globals.scoreCount > 8000 && globals.scoreCount <= 9000)
 		{
@@ -198,7 +198,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
-			CollisionCamera.transform.position.y -= 1;
+			//CollisionCamera.transform.position.y -= 1;
 		}
 		else
 		{
@@ -215,7 +215,7 @@ function FixedUpdate()
 			globals.enemySeparationDistance = (currentEnemySeparationDistance + 88.69999);
 			//globals.enemySeparationDistance = 850;
 			globals.collisionLimitSeparationDistance = 803.05;
-			CollisionCamera.transform.position.y -= 1;
+			//CollisionCamera.transform.position.y -= 1;
 		}
 		car.transform.position = Vector3(car.position.x, car.position.y-globals.subtractedValueFromEnemyCarY, car.position.z);
 		//MainCamera.transform.Translate(Vector3(0, -((car.position.y-globals.subtractedValueFromEnemyCarY)/50), 0));

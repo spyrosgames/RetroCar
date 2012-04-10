@@ -37,11 +37,10 @@ public class RenderLoop : MonoBehaviour {
   	
 	private eNavScreen navScreen = eNavScreen.Main;
 	
-	/*
 	private MainMenu mainMenu = new MainMenu();
 	private OpenFeintSample ofSample;// = new OpenFeintSample();
 	private OpenFeintXSample ofxSample;// = new OpenFeintXSample();
-	*/
+	
 	void InitializeWithConfiguration(bool initSuccess) {
 		//ofSample.initializeInterface();
 		//ofxSample.initializeInterface();
@@ -51,19 +50,17 @@ public class RenderLoop : MonoBehaviour {
 	//	Gree.Unity.CallbackFetcherProperties.OnPropertiesLoaded += new Gree.Unity.CallbackFetcherProperties.PropertiesCallback(InitializeWithConfiguration);
 		Gree.Unity.OFPropertiesCustomization.InitializePropertiesSystem();
 		Gree.Unity.UnityToNativeProperties.LoadAndSendPropertiesToNative((string)null);
-		/*
 		ofSample = new OpenFeintSample();
 		ofxSample = new OpenFeintXSample();
 		
 		ofSample.initializeInterface();
-		ofxSample.initializeInterface();
-		*/
+		ofxSample.initializeInterface();		
 	}
 	
 	void OnGUI() {
         //scale and position the GUI element to draw it at the screen's top left corner  
 //		GUI.matrix = Matrix4x4.TRS(positionVector, Quaternion.identity, screenScale);		
-		/*
+		
 		if (navScreen == eNavScreen.Main) {
 			GUI.matrix = mainMenu.scalingMatrix;
 			navScreen = mainMenu.DrawGUI();
@@ -80,6 +77,5 @@ public class RenderLoop : MonoBehaviour {
 				navScreen = eNavScreen.Main;
 			}
 		}
-		*/
 	}
 }

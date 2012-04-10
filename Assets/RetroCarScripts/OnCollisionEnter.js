@@ -197,7 +197,7 @@ function OnCollisionEnter(other : Collision)
 			LifesGUITexture.texture = globals.currentLifesGUITexture;
 			if(k == 0)
 			{
-				CollisionCamera.transform.position.y -= 1;
+				//CollisionCamera.transform.position.y -= 1;
 				//CollisionCamera.transform.position.y = other.transform.position.y;
 				SecondAnimate();
 			}
@@ -209,7 +209,7 @@ function OnCollisionEnter(other : Collision)
 			LifesGUITexture.texture = null;
 			if(k == 0)
 			{
-				CollisionCamera.transform.position.y -= 1;
+				//CollisionCamera.transform.position.y -= 1;
 				//CollisionCamera.transform.position.y = other.transform.position.y;
 				SecondAnimate();
 				SubmitOpenFeintScore();
@@ -229,6 +229,7 @@ function Animate()
 	AnimationPlane.renderer.enabled = true;
 	if( (retroCarHeadYDimension > collisionSeparatorYDimension) || (retroCarHeadYDimension > collisionSeparatorYDimension) || (thisOtherY == -3435.462) || (thisOtherY == -4149.762)) //because of negative values, > and < are inverted.
 	{
+		CollisionCamera.transform.position.y = thisOther.transform.position.y - 234;
 		AnimationPlane.transform.position.x = thisOtherX + 37;
 		AnimationPlane.transform.position.y = thisOtherY;
 		AnimationPlane.transform.position.z = thisOtherZ;
@@ -238,6 +239,8 @@ function Animate()
 		//if(thisOther.transform.position.x == 126.0737)
 		if(thisOther.transform.position.x >= 126)	
 		{
+			//CollisionCamera.transform.position.y += 1;
+			CollisionCamera.transform.position.y = thisOther.transform.position.y - 416;
 			//AnimationPlane.transform.position.x = thisOtherX-100;
 			AnimationPlane.transform.position.x = thisOtherX-100;
 			AnimationPlane.transform.position.y = thisOtherY-180;
@@ -245,6 +248,8 @@ function Animate()
 		}
 		else
 		{
+			//CollisionCamera.transform.position.y += 1;
+			CollisionCamera.transform.position.y = thisOther.transform.position.y - 416;
 			AnimationPlane.transform.position.x = thisOtherX+180;
 			AnimationPlane.transform.position.y = thisOtherY-180;
 			AnimationPlane.transform.position.z = thisOtherZ;
@@ -302,14 +307,16 @@ function SecondAnimate()
 	if((thisOther.transform.position.x >= 126))	
 	{
 		//AnimationPlane.transform.position.x = thisOtherX-100;
-		if(retroCarHead.transform.position.y < (thisOther.transform.position.y - 129))
+		if(retroCarHead.transform.position.y < (thisOther.transform.position.y - 135))
 		{
+			CollisionCamera.transform.position.y = thisOther.transform.position.y - 416;
 			AnimationPlane.transform.position.x = thisOtherX-100;
 			AnimationPlane.transform.position.y = thisOtherY-180;
 			AnimationPlane.transform.position.z = thisOtherZ;	
 		}
 		else
 		{
+			CollisionCamera.transform.position.y = thisOther.transform.position.y - 234;
 			AnimationPlane.transform.position.x = thisOtherX + 37;
 			AnimationPlane.transform.position.y = thisOtherY;
 			AnimationPlane.transform.position.z = thisOtherZ;
@@ -319,14 +326,16 @@ function SecondAnimate()
 	else if((thisOther.transform.position.x <= -12))
 	{
 		
-		if(retroCarHead.transform.position.y < (thisOther.transform.position.y - 129))
+		if(retroCarHead.transform.position.y < (thisOther.transform.position.y - 135))
 		{
+			CollisionCamera.transform.position.y = thisOther.transform.position.y - 416;
 			AnimationPlane.transform.position.x = thisOtherX+180;
 			AnimationPlane.transform.position.y = thisOtherY-180;
 			AnimationPlane.transform.position.z = thisOtherZ;
 		}
 		else
 		{
+			CollisionCamera.transform.position.y = thisOther.transform.position.y - 234;
 			AnimationPlane.transform.position.x = thisOtherX + 37;
 			AnimationPlane.transform.position.y = thisOtherY;
 			AnimationPlane.transform.position.z = thisOtherZ;

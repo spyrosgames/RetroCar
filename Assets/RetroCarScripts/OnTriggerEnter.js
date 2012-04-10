@@ -121,10 +121,6 @@ function OnTriggerExit(other : Collider)
 
 			secondEnemyCarClone.rigidbody.isKinematic = true;
 			secondEnemyCarClone.tag = "SecondEnemyCar";
-
-
-			collisionLimitClone = Instantiate(Resources.Load("CollisionLimitPrefab"), Vector3(globals.collisionLimitX, secondEnemyCarClone.transform.position.y - 129, globals.collisionLimitZ), Quaternion.Euler(Vector3(270, 0, 0)));
-			collisionLimitClone.tag = "SecondCollisionLimit";
 		}
 	}
 	if(globals.scoreCount > 3000 && globals.scoreCount <= 4000)
@@ -135,10 +131,6 @@ function OnTriggerExit(other : Collider)
 
 			secondEnemyCarClone.rigidbody.isKinematic = true;
 			secondEnemyCarClone.tag = "SecondEnemyCar";
-
-
-			collisionLimitClone = Instantiate(Resources.Load("CollisionLimitPrefab"), Vector3(globals.collisionLimitX, secondEnemyCarClone.transform.position.y - 129, globals.collisionLimitZ), Quaternion.Euler(Vector3(270, 0, 0)));
-			collisionLimitClone.tag = "SecondCollisionLimit";
 		}
 	}
 	if(globals.scoreCount > 4000 && globals.scoreCount <= 5000)
@@ -147,10 +139,6 @@ function OnTriggerExit(other : Collider)
 
 			secondEnemyCarClone.rigidbody.isKinematic = true;
 			secondEnemyCarClone.tag = "SecondEnemyCar";
-
-
-			collisionLimitClone = Instantiate(Resources.Load("CollisionLimitPrefab"), Vector3(globals.collisionLimitX, secondEnemyCarClone.transform.position.y - 129, globals.collisionLimitZ), Quaternion.Euler(Vector3(270, 0, 0)));
-			collisionLimitClone.tag = "SecondCollisionLimit";
 	}
 	if(globals.scoreCount > 5000 && globals.scoreCount <= 10000)
 	{
@@ -158,10 +146,6 @@ function OnTriggerExit(other : Collider)
 
 			secondEnemyCarClone.rigidbody.isKinematic = true;
 			secondEnemyCarClone.tag = "SecondEnemyCar";
-
-
-			collisionLimitClone = Instantiate(Resources.Load("CollisionLimitPrefab"), Vector3(globals.collisionLimitX, secondEnemyCarClone.transform.position.y - 129, globals.collisionLimitZ), Quaternion.Euler(Vector3(270, 0, 0)));
-			collisionLimitClone.tag = "SecondCollisionLimit";
 	}
 	/*
 	if(randomEnemyCarPosition == 0)

@@ -76,6 +76,7 @@ function Start()
 	if(globals.lifesCount != 0)
 	{
 		globals.enemySeparationDistance = 714.29999;
+		globals.returningFromCrash = true;
 		Application.LoadLevel("one");
 	}
 	else if(globals.lifesCount == 0)
@@ -83,6 +84,7 @@ function Start()
 		globals.lifesCount = 4;
 		globals.scoreCount = 0;
 		globals.enemySeparationDistance = 714.29999;
+		globals.returningFromCrash = false;
 		Application.LoadLevel("mainmenu");
 	}
 }

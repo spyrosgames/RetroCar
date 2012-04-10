@@ -111,6 +111,8 @@ class Globals
 
 	public var audioPitch : float;
 
+	public var returningFromCrash : boolean = false;
+
 	private static var Instance : Globals;
 	
 	protected function Globals()

@@ -54,6 +54,9 @@
      <Compile Include="Assets\Editor\OpenFeint\Editor Integration\OFEditorIntegration.cs" />
      <Compile Include="Assets\Editor\OpenFeint\Editor Integration\OpenFeintSettingsWizard.cs" />
      <Compile Include="Assets\GameCode\BaseUI.cs" />
+     <Compile Include="Assets\GameCode\MainMenu.cs" />
+     <Compile Include="Assets\GameCode\OpenFeintSample.cs" />
+     <Compile Include="Assets\GameCode\OpenFeintXSample.cs" />
      <Compile Include="Assets\GameCode\RenderLoop.cs" />
      <Compile Include="Assets\Plugins\Base\CallbackFetcherBase.cs" />
      <Compile Include="Assets\Plugins\Base\CallbackFetcherFactory.cs" />
@@ -101,6 +104,7 @@
      <None Include="Assets\RetroCarScripts\OpenFeintStuff.js" />
      <None Include="Assets\RetroCarScripts\PauseButton.js" />
      <None Include="Assets\RetroCarScripts\PlayButton.js" />
+     <None Include="Assets\RetroCarScripts\RemoveCarAfterCrash.js" />
      <None Include="Assets\RetroCarScripts\RightButton.js" />
      <None Include="Assets\RetroCarScripts\ScoreIncrease.js" />
      <None Include="Assets\RetroCarScripts\StartSound.js" />
